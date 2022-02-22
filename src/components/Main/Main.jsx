@@ -27,7 +27,7 @@ function Main() {
         <div className={classes.arrow}>
           <img src={arrow} alt='' />
         </div>
-        <div className={classes.scrollText}>Scroll down</div>
+        <div className={classes.scrollText}>Scroll<br />down</div>
       </div>
     </main>
   );

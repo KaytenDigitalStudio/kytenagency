@@ -16,7 +16,7 @@ const Menu = ({ items, active, setActive }) => {
           onClick={(e) => e.stopPropagation()}
         >
           <img className={classes.logo} src={logo} alt='Kayten Digital Logo' />
-          <div className={classes.logoText}>Kayten Digital</div>
+          <div className={classes.logoText}>Kyten Digital</div>
         </a>
         <ul>
           {items.map((item) => (

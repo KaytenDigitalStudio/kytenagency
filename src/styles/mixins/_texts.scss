@@ -1,28 +1,28 @@
-@mixin main-description-text {
+@mixin main-description-text($fontSize) {
   font-family: Poppins;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
+  font-size: $fontSize;
   line-height: 180%;
   /* or 29px */
   color: colors.$white;
 }
 
-@mixin main-title-text {
+@mixin main-title-text($fontSize) {
   font-family: Poppins;
   font-style: normal;
   font-weight: 900;
-  font-size: 68px;
+  font-size: $fontSize;
   line-height: 109%;
   /* or 74px */
   color: colors.$white;
 }
 
-@mixin main-topic-text {
+@mixin main-topic-text($fontSize) {
   font-family: Poppins;
   font-style: normal;
   font-weight: bold;
-  font-size: 20px;
+  font-size: $fontSize;
   line-height: 30px;
   /* identical to box height */
   letter-spacing: 0.03em;
@@ -31,22 +31,22 @@
   color: colors.$red-pink;
 }
 
-@mixin main-button-text {
+@mixin main-button-text($fonSize){
   font-family: Poppins;
   font-style: normal;
   font-weight: 600;
-  font-size: 16px;
+  font-size: $fonSize;
   line-height: 24px;
   /* identical to box height */
   text-align: center;
   color: colors.$white;
 }
 
-@mixin main-scroll-text {
+@mixin main-scroll-text($fonSize) {
   font-family: Poppins;
   font-style: normal;
   font-weight: normal;
-  font-size: 13px;
+  font-size: $fonSize;
   line-height: 120%;
   /* or 16px */
   display: flex;
@@ -76,11 +76,11 @@
   opacity: 0.9;
 }
 
-@mixin menu-text {
+@mixin menu-text($fontSize) {
   font-family: Poppins;
   font-style: normal;
   font-weight: 900;
-  font-size: 68px;
+  font-size: $fontSize;
   line-height: 109%;
   /* or 74px */
   display: flex;

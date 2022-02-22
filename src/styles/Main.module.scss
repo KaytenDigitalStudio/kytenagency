@@ -7,6 +7,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+ 
   .body {
     @media only screen and (min-width: 1640px) {
       width: 1408px;
@@ -16,13 +17,26 @@
       width: 1114px;
       padding-top: 167px;
     }
+    @media only screen and (min-width: 1280px) {
+      width: 960px;
+      padding-top: 77px;
+    }
     height: 595px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     .ilustration {
       width: 585px;
       height: 595px;
+      @media only screen and (min-width: 1280px) {
+        width: 435px;
+        height: 445px;
+        img{
+          width: 435px;
+          height: 445px;
+        }
+      }
     }
     .textBlock {
       @media only screen and (min-width: 1640px) {
@@ -31,17 +45,32 @@
       @media only screen and (min-width: 1440px) {
         width: 431px;
       }
+      @media only screen and (min-width: 1280px) {
+        width: 431px;
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+      }
       height: 554px;
       .topic {
-        @include main-topic-text;
+        @include main-topic-text(20px);
+        @media only screen and (min-width: 1280px) {
+          @include main-topic-text(15px);
+        }
       }
       .title {
-        @include main-title-text;
+        @include main-title-text(68px);
+        @media only screen and (min-width: 1280px) {
+          @include main-title-text(58px);
+        }
         margin-top: 15px;
       }
       .description {
         margin-top: 25px;
-        @include main-description-text;
+        @include main-description-text(16px);
+        @media only screen and (min-width: 1280px) {
+          @include main-description-text(12px);
+        }
       }
       .button {
         width: 200px;
@@ -56,18 +85,37 @@
         @media only screen and (min-width: 1440px) {
           margin-top: 77px;
         }
-        @include main-button-text;
+        @include main-button-text(16px);
+        @media only screen and (min-width: 1280px) {
+          @include main-button-text(12px);
+          width: 170px;
+          height: 63px;
+          background-size:contain;
+         margin-top: 30px;
+         align-self: flex-end;
+        }
         p {
           margin-right: 12px;
           margin-bottom: 7px;
           top: 27px;
           left: 44px;
+          @media only screen and (min-width: 1280px) {
+            margin-right: 26px;
+            margin-bottom: 3px;
+            top: 27px;
+            left: 44px;
+          }
         }
       }
     }
   }
   .scroll {
     margin-top: 97px;
+    @media only screen and (min-width: 1280px) {
+     margin-top: -55px;
+     width: 50px;
+      height: 50px;
+    }
     width: 74px;
     height: 50px;
     display: flex;
@@ -77,6 +125,10 @@
     .arrow {
       width: 100%;
       height: 34px;
+      @media only screen and (min-width: 1280px) {
+        width: 100%;
+      height: 34px;
+       }
       display: flex;
       justify-content: center;
       align-items: center;
@@ -87,7 +139,14 @@
     .scrollText {
       width: 74px;
       height: 32px;
-      @include main-scroll-text;
+      text-align: center;
+      @include main-scroll-text(13px);
+      @media only screen and (min-width: 1280px) {
+        width: 50px;
+        height: 32px;
+        @include main-scroll-text(10px);
+        margin-left: 22.5px;
+       }
     }
   }
 }
