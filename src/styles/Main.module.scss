@@ -1,0 +1,93 @@
+@use 'variables/colors';
+@import './mixins/texts';
+
+.main {
+  width: 100%;
+  height: 868px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .body {
+    @media only screen and (min-width: 1640px) {
+      width: 1408px;
+      padding-top: 187px;
+    }
+    @media only screen and (min-width: 1440px) {
+      width: 1114px;
+      padding-top: 167px;
+    }
+    height: 595px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .ilustration {
+      width: 585px;
+      height: 595px;
+    }
+    .textBlock {
+      @media only screen and (min-width: 1640px) {
+        width: 525px;
+      }
+      @media only screen and (min-width: 1440px) {
+        width: 431px;
+      }
+      height: 554px;
+      .topic {
+        @include main-topic-text;
+      }
+      .title {
+        @include main-title-text;
+        margin-top: 15px;
+      }
+      .description {
+        margin-top: 25px;
+        @include main-description-text;
+      }
+      .button {
+        width: 200px;
+        height: 83px;
+        background: none;
+        border: 0;
+        background-image: url(./../images/ilustrations/button.svg);
+        background-repeat: no-repeat;
+        @media only screen and (min-width: 1640px) {
+          margin-top: 93px;
+        }
+        @media only screen and (min-width: 1440px) {
+          margin-top: 77px;
+        }
+        @include main-button-text;
+        p {
+          margin-right: 12px;
+          margin-bottom: 7px;
+          top: 27px;
+          left: 44px;
+        }
+      }
+    }
+  }
+  .scroll {
+    margin-top: 97px;
+    width: 74px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .arrow {
+      width: 100%;
+      height: 34px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 60%;
+      }
+    }
+    .scrollText {
+      width: 74px;
+      height: 32px;
+      @include main-scroll-text;
+    }
+  }
+}
