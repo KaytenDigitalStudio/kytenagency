@@ -6,6 +6,13 @@ import Menu from '../Menu/Menu';
 
 function Header() {
   const [menuActive, setMenuActive] = useState(false);
+  const [switchToggled, setSwitchToggled] = useState(false);
+
+  const OpenMenu = () => {
+    setMenuActive(!menuActive);
+    switchToggled ? setSwitchToggled(false) : setSwitchToggled(true);
+  };
+
   const items = [
     { value: 'Main', hred: '/main' },
     { value: 'About', hred: '/about' },
@@ -13,18 +20,23 @@ function Header() {
     { value: 'Portfolio', hred: '/portfolio' },
     { value: 'Contacts', hred: '/contacts' },
   ];
+
   return (
     <div className={classes.head}>
       <nav className={classes.nav}>
         <a href='#' className={classes.logoGroup}>
           <img className={classes.logo} src={logo} alt='Kayten Digital Logo' />
-          <div className={classes.logoText}>Kayten Digital</div>
+          <div className={classes.logoText}>Kyten Digital</div>
         </a>
         <div
-          className={classes.burgerMenu}
-          onClick={() => setMenuActive(!menuActive)}
+          className={
+            switchToggled ? classes.burgerMenuActive : classes.burgerMenu
+          }
+          onClick={OpenMenu}
         >
-          <img src={burger} alt='' />
+          <span className={classes.burgerLine}></span>
+          <span className={classes.burgerLine}></span>
+          <span className={classes.burgerLine}></span>
         </div>
       </nav>
       <Menu items={items} active={menuActive} setActive={setMenuActive} />
