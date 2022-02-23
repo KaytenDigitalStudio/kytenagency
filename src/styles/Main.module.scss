@@ -12,7 +12,7 @@
       width: 1408px;
       padding-top: 187px;
     }
-    @media only screen and (min-width: 1440px) {
+    @media only screen and (min-width: 1440px) and (max-width: 1639px) {
       width: 1114px;
       padding-top: 167px;
     }
@@ -28,7 +28,7 @@
       @media only screen and (min-width: 1640px) {
         width: 525px;
       }
-      @media only screen and (min-width: 1440px) {
+      @media only screen and (min-width: 1440px) and (max-width: 1639px) {
         width: 431px;
       }
       height: 554px;
@@ -53,7 +53,7 @@
         @media only screen and (min-width: 1640px) {
           margin-top: 93px;
         }
-        @media only screen and (min-width: 1440px) {
+        @media only screen and (min-width: 1440px) and (max-width: 1639px) {
           margin-top: 77px;
         }
         @include main-button-text;
