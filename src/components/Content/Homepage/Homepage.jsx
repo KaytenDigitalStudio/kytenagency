@@ -5,7 +5,7 @@ import arrow from '../../../images/icons/arrow.svg';
 
 function Homepage() {
   return (
-    <main className={classes.main}>
+    <div className={classes.homepage} id='homepage'>
       <div className={classes.body}>
         <div className={classes.ilustration}>
           <img src={ilustration} alt='' />
@@ -29,7 +29,7 @@ function Homepage() {
         </div>
         <div className={classes.scrollText}>Scroll<br />down</div>
       </div>
-    </main>
+    </div>
   );
 }
 
