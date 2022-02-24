@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from '../../styles/Content.module.scss';
-import Homepage from './Homepage/Homepage';
-import Services from './Services/Services';
+import Homepage from './Homepage';
+import Services from './Services';
 
 function Content() {
   return (

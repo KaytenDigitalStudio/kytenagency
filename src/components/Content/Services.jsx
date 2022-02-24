@@ -1,6 +1,6 @@
 import React from 'react';
-import classes from '../../../styles/Services.module.scss';
-import thirdImage from '../../../images/ilustrations/third.svg';
+import classes from '../../styles/Services.module.scss';
+import thirdImage from '../../images/ilustrations/third.svg';
 
 function Services() {
   return (
