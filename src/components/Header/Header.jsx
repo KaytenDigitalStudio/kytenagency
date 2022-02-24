@@ -1,37 +1,25 @@
 import React, { useState } from 'react';
 import logo from '../../images/logo/logo.svg';
-import burger from '../../images/icons/hamb-menu.svg';
 import classes from '../../styles/Header.module.scss';
-import Menu from '../Menu/Menu';
+import Menu from '../Header/Menu/Menu';
 
 function Header() {
   const [menuActive, setMenuActive] = useState(false);
-  const [switchToggled, setSwitchToggled] = useState(false);
 
-  const OpenMenu = () => {
+  const OpenMenu = (e) => {
     setMenuActive(!menuActive);
-    switchToggled ? setSwitchToggled(false) : setSwitchToggled(true);
+    menuActive ? setMenuActive(false) : setMenuActive(true);
   };
-
-  const items = [
-    { value: 'Main', hred: '/main' },
-    { value: 'About', hred: '/about' },
-    { value: 'Services', hred: '/services' },
-    { value: 'Portfolio', hred: '/portfolio' },
-    { value: 'Contacts', hred: '/contacts' },
-  ];
 
   return (
     <div className={classes.head}>
       <nav className={classes.nav}>
-        <a href='#' className={classes.logoGroup}>
+        <a href='/main' className={classes.logoGroup}>
           <img className={classes.logo} src={logo} alt='Kayten Digital Logo' />
           <div className={classes.logoText}>Kyten Digital</div>
         </a>
         <div
-          className={
-            switchToggled ? classes.burgerMenuActive : classes.burgerMenu
-          }
+          className={menuActive ? classes.burgerMenuActive : classes.burgerMenu}
           onClick={OpenMenu}
         >
           <span className={classes.burgerLine}></span>
@@ -39,7 +27,7 @@ function Header() {
           <span className={classes.burgerLine}></span>
         </div>
       </nav>
-      <Menu items={items} active={menuActive} setActive={setMenuActive} />
+      <Menu active={menuActive} setActive={setMenuActive} />
     </div>
   );
 }

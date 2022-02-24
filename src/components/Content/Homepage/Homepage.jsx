@@ -1,9 +1,9 @@
 import React from 'react';
-import classes from '../../styles/Main.module.scss';
-import ilustration from '../../images/ilustrations/first.svg';
-import arrow from '../../images/icons/arrow.svg';
+import classes from '../../../styles/Homepage.module.scss';
+import ilustration from '../../../images/ilustrations/first.svg';
+import arrow from '../../../images/icons/arrow.svg';
 
-function Main() {
+function Homepage() {
   return (
     <main className={classes.main}>
       <div className={classes.body}>
@@ -33,4 +33,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default Homepage;
