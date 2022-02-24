@@ -18,7 +18,8 @@ function Header() {
           <img className={classes.logo} src={logo} alt='Kayten Digital Logo' />
           <div className={classes.logoText}>Kyten Digital</div>
         </a>
-        {/* <ul className={classes.navMenu}>
+        <nav className={classes.desktopMenu}>
+        <ul className={classes.navMenu}>
           <li>
             <a href='#homepage' className={classes.navText}>
               Home
@@ -44,7 +45,8 @@ function Header() {
               Contacts
             </a>
           </li>
-        </ul> */}
+        </ul>
+        </nav>
         <div
           className={menuActive ? classes.burgerMenuActive : classes.burgerMenu}
           onClick={OpenMenu}
