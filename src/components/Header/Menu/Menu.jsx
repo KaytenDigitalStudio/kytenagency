@@ -3,9 +3,9 @@ import classes from '../../../styles/Menu.module.scss';
 
 const Menu = ({ active, setActive }) => {
   const items = [
-    { value: 'Main', href: '/main' },
-    { value: 'About', href: '/about' },
-    { value: 'Services', href: '/services' },
+    { value: 'Main', href: '#homepage' },
+    { value: 'About', href: '#about' },
+    { value: 'Services', href: '#services' },
     { value: 'Portfolio', href: '/portfolio' },
     { value: 'Contacts', href: '/contacts' },
   ];
@@ -20,7 +20,9 @@ const Menu = ({ active, setActive }) => {
         <ul>
           {items.map((items) => (
             <li key={items.value}>
-              <a href={items.href}>{items.value}</a>
+              <a href={items.href} onClick={() => setActive(false)}>
+                {items.value}
+              </a>
             </li>
           ))}
         </ul>

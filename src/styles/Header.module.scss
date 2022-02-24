@@ -1,7 +1,7 @@
 @use 'variables/colors';
 @use 'fonts';
 
-.head {
+.header {
   position: fixed;
   width: 100%;
   height: 80px;
@@ -28,6 +28,18 @@
     align-items: center;
     justify-content: space-between;
     height: 80px;
+    .navMenu {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      .navText {
+        margin: 0 0 0 35px;
+        color: colors.$white;
+        font-family: 'Poppins';
+        font-size: 14px;
+      }
+    }
+
     .logoGroup {
       top: 0px;
       // z-index: 2;

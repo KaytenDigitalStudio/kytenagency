@@ -1,13 +1,14 @@
 import React from 'react';
 import classes from '../../styles/Content.module.scss';
 import Homepage from './Homepage/Homepage';
+import Services from './Services/Services';
 
 function Content() {
   return (
-    <main className={classes.main}>
+    <div className={classes.content}>
       <Homepage />
-      <Homepage />
-    </main>
+      <Services />
+    </div>
   );
 }
 
