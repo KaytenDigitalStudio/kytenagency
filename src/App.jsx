@@ -1,16 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import classes from './styles/App.module.scss';
 import Header from './components/Header/Header';
-import Main from './components/Main/Main';
+import Content from './components/Content/Content';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
-    <div className={classes.main}>
-      <Header />
-      <div className={classes.wrapper}>
-        <Main />
+    <BrowserRouter>
+      <div className={classes.main}>
+        <Header />
+        <div className={classes.wrapper}>
+          <Content />
+        </div>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
 

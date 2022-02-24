@@ -3,19 +3,19 @@
 
 .main {
   width: 100%;
-  height: 868px;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
- 
+  justify-content: space-between;
   .body {
     @media only screen and (min-width: 1640px) {
       width: 1408px;
-      padding-top: 187px;
+      padding-top: 177px;
     }
-    @media only screen and (min-width: 1440px) {
+    @media only screen and (min-width: 1440px) and (max-width: 1639px) {
       width: 1114px;
-      padding-top: 167px;
+      padding-top: 157px;
     }
     @media only screen and (min-width: 1280px) {
       width: 960px;
@@ -42,7 +42,7 @@
       @media only screen and (min-width: 1640px) {
         width: 525px;
       }
-      @media only screen and (min-width: 1440px) {
+      @media only screen and (min-width: 1440px) and (max-width: 1639px) {
         width: 431px;
       }
       @media only screen and (min-width: 1280px) {
@@ -79,10 +79,11 @@
         border: 0;
         background-image: url(./../images/ilustrations/button.svg);
         background-repeat: no-repeat;
+        cursor: pointer;
         @media only screen and (min-width: 1640px) {
           margin-top: 93px;
         }
-        @media only screen and (min-width: 1440px) {
+        @media only screen and (min-width: 1440px) and (max-width: 1639px) {
           margin-top: 77px;
         }
         @include main-button-text(16px);
@@ -110,18 +111,13 @@
     }
   }
   .scroll {
-    margin-top: 97px;
-    @media only screen and (min-width: 1280px) {
-     margin-top: -55px;
-     width: 50px;
-      height: 50px;
-    }
     width: 74px;
-    height: 50px;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 10px;
     .arrow {
       width: 100%;
       height: 34px;

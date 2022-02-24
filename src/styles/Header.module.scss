@@ -8,7 +8,7 @@
   @media only screen and (min-width: 1640px) {
     padding: 0px 240px 0 240px;
   }
-  @media only screen and (min-width: 1440px) {
+  @media only screen and (min-width: 1440px) and (max-width: 1639px) {
     padding: 0px 165px 0 165px;
   }
   @media only screen and (min-width: 1280px) {
@@ -23,6 +23,7 @@
     rgba(32, 10, 43, 0.69) 105%
   );
   backdrop-filter: blur(100px);
+  
   a:link,
   a:visited,
   a:hover,
@@ -43,6 +44,7 @@
       display: flex;
       width: 270px;
       height: 40px;
+      z-index: 20;
       .logoText {
         text-transform: uppercase;
         font-family: 'Poppins';
@@ -57,7 +59,7 @@
       }
     }
     .burgerMenu {
-      // z-index: 2;
+      z-index: 20;
       width: 40px;
       height: 30px;
       @media only screen and (min-width: 1280px) {
@@ -65,11 +67,40 @@
         height: 25px;
       }
       cursor: pointer;
-      img{
-        @media only screen and (min-width: 1280px) {
-          width: 35px;
-          height: 25px;
-        }
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      .burgerLine {
+        width: 40px;
+        height: 4.29px;
+        background-color: colors.$red-pink;
+        transition: all 0.4s ease;
+      }
+    }
+    .burgerMenuActive {
+      z-index: 20;
+      width: 40px;
+      height: 30px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      .burgerLine {
+        width: 40px;
+        height: 4.29px;
+        background-color: colors.$red-pink;
+        transition: all 0.4s ease;
+      }
+      .burgerLine:last-child {
+        opacity: 0;
+      }
+      .burgerLine:first-child {
+        transform: rotate(45deg) translate(9px, 9px);
+      }
+      .burgerLine:nth-child(2) {
+        transform: rotate(-45deg);
       }
     }
   }

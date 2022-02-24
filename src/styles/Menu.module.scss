@@ -72,7 +72,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  transform: translateX(0);
+  transform: translateY(0);
   .blur {
     position: absolute;
     width: 100%;
@@ -127,36 +127,4 @@
       height: 54px;
     }
   }
-}
-
-.logoGroup {
-  position: absolute;
-  top: 20px;
-  @media only screen and (min-width: 1280px) {
-    left: 160px;
-  }
-  left: 0px;
-  // z-index: 2;
-  display: flex;
-  width: 270px;
-  height: 40px;
-  .logoText {
-    text-transform: uppercase;
-    font-family: 'Poppins';
-    font-weight: 275;
-    font-size: 28px;
-    line-height: 120%;
-    display: flex;
-    align-items: center;
-    letter-spacing: 0.08em;
-    color: colors.$white;
-    text-decoration: none;
-  }
-}
-.burgerMenu {
-  // z-index: 2;
-  width: 40px;
-  height: 30px;
-  cursor: pointer;
-  
 }

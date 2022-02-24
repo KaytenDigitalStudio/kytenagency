@@ -1,33 +1,33 @@
 import React, { useState } from 'react';
 import logo from '../../images/logo/logo.svg';
-import burger from '../../images/icons/hamb-menu.svg';
 import classes from '../../styles/Header.module.scss';
-import Menu from '../Menu/Menu';
+import Menu from '../Header/Menu/Menu';
 
 function Header() {
   const [menuActive, setMenuActive] = useState(false);
-  const items = [
-    { value: 'Main', hred: '/main' },
-    { value: 'About', hred: '/about' },
-    { value: 'Services', hred: '/services' },
-    { value: 'Portfolio', hred: '/portfolio' },
-    { value: 'Contacts', hred: '/contacts' },
-  ];
+
+  const OpenMenu = (e) => {
+    setMenuActive(!menuActive);
+    menuActive ? setMenuActive(false) : setMenuActive(true);
+  };
+
   return (
     <div className={classes.head}>
       <nav className={classes.nav}>
-        <a href='#' className={classes.logoGroup}>
+        <a href='/main' className={classes.logoGroup}>
           <img className={classes.logo} src={logo} alt='Kayten Digital Logo' />
           <div className={classes.logoText}>Kyten Digital</div>
         </a>
         <div
-          className={classes.burgerMenu}
-          onClick={() => setMenuActive(!menuActive)}
+          className={menuActive ? classes.burgerMenuActive : classes.burgerMenu}
+          onClick={OpenMenu}
         >
-          <img src={burger} alt='' />
+          <span className={classes.burgerLine}></span>
+          <span className={classes.burgerLine}></span>
+          <span className={classes.burgerLine}></span>
         </div>
       </nav>
-      <Menu items={items} active={menuActive} setActive={setMenuActive} />
+      <Menu active={menuActive} setActive={setMenuActive} />
     </div>
   );
 }
