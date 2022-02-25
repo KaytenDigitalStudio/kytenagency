@@ -3,8 +3,8 @@ import classes from '../../styles/Services.module.scss';
 import design from '../../images/icons/design.svg';
 import code from '../../images/icons/code.svg';
 import marketing from '../../images/icons/marketing.svg';
-import third from '../../images/ilustrations/third.svg';
-import fourth from '../../images/ilustrations/fourth.svg';
+// import third from '../../images/ilustrations/third.svg';
+// import fourth from '../../images/ilustrations/fourth.svg';
 
 function Services() {
   return (
