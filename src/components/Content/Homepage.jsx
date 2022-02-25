@@ -1,9 +1,24 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import classes from '../../styles/Homepage.module.scss';
 import ilustration from '../../images/ilustrations/first.svg';
 import arrow from '../../images/icons/arrow.svg';
 
 function Homepage() {
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition(position);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <div className={classes.homepage} id='homepage'>
       <div className={classes.body}>
@@ -23,7 +38,11 @@ function Homepage() {
           </button>
         </div>
       </div>
-      <div className={classes.scrollShown}>
+      <div
+        className={
+          scrollPosition < 25 ? classes.scrollShown : classes.scrollHidden
+        }
+      >
         <div className={classes.arrow}>
           <img src={arrow} alt='' draggable='false' />
         </div>
