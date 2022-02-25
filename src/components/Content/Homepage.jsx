@@ -46,7 +46,7 @@ function Homepage() {
         <div className={classes.arrow}>
           <img src={arrow} alt='' draggable='false' />
         </div>
-        <div className={classes.scrollText}>Scroll down</div>
+        <div className={classes.scrollText}>Scroll<br />down</div>
       </div>
     </div>
   );

@@ -23,15 +23,8 @@ function Header() {
           />
           <div className={classes.logoText}>Kyten Digital</div>
         </a>
-        <div
-          className={menuActive ? classes.burgerMenuActive : classes.burgerMenu}
-          onClick={OpenMenu}
-        >
-          <span className={classes.burgerLine}></span>
-          <span className={classes.burgerLine}></span>
-          <span className={classes.burgerLine}></span>
-        </div>
-        {/* <ul className={classes.navMenu}>
+        <nav className={classes.desktopMenu}>
+        <ul className={classes.navMenu}>
           <li>
             <a href='#homepage' className={classes.navText}>
               Home
@@ -57,7 +50,16 @@ function Header() {
               Contacts
             </a>
           </li>
-        </ul> */}
+        </ul>
+        </nav>
+        <div
+          className={menuActive ? classes.burgerMenuActive : classes.burgerMenu}
+          onClick={OpenMenu}
+        >
+          <span className={classes.burgerLine}></span>
+          <span className={classes.burgerLine}></span>
+          <span className={classes.burgerLine}></span>
+        </div>
       </nav>
       <Menu active={menuActive} setActive={setMenuActive} />
     </header>

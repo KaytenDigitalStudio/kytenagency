@@ -40,8 +40,8 @@ function Services() {
           </p>
         </div>
       </div>
-      <img className={classes.elemOne} src={third} alt='' draggable='false' />
-      <img className={classes.elemTwo} src={fourth} alt='' draggable='false' />
+      {/* <img className={classes.elemOne} src={third} alt='' draggable='false' /> */}
+      {/* <img className={classes.elemTwo} src={fourth} alt='' draggable='false' /> */}
     </div>
   );
 }

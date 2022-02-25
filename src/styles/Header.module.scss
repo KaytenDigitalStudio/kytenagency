@@ -11,6 +11,12 @@
   @media only screen and (min-width: 1440px) and (max-width: 1639px) {
     padding: 0px 165px 0 165px;
   }
+  @media only screen and (min-width: 1280px) {
+    padding: 0px 160px 0 160px;
+    height: 60px;
+  }
+  top: 0px;
+  left: 0px;
   background: linear-gradient(
     90deg,
     rgba(46, 9, 22, 0.89) 10.17%,
@@ -28,21 +34,13 @@
     align-items: center;
     justify-content: space-between;
     height: 80px;
-    .navMenu {
-      display: flex;
-      justify-content: space-between;
-      list-style: none;
-      .navText {
-        margin: 0 0 0 35px;
-        color: colors.$white;
-        font-family: 'Poppins';
-        font-size: 14px;
-      }
+    @media only screen and (min-width: 1280px) {
+      height: 60px;
     }
+    
 
     .logoGroup {
       top: 0px;
-      // z-index: 2;
       display: flex;
       width: 270px;
       height: 40px;
@@ -69,10 +67,68 @@
         user-select: none;
       }
     }
+    .desktopMenu{
+      width:auto;
+      display: block;
+     
+      @media only screen and (max-width: 768px) {
+          display: none;
+       }
+
+      .navMenu {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+
+        
+
+        .navText {
+          margin: 0 0 0 35px;
+          color: colors.$white;
+          font-family: 'Poppins';
+          font-size: 14px;
+          cursor: pointer;
+          position: relative;
+        }
+        .navText::after{
+          content: '';
+          display: none;
+          background-color: colors.$red-pink;
+          width: 100%;
+          height: 3.5px;
+          position: absolute;
+          transform-origin: left;
+          margin: 0 0 0 35px;
+        }
+        .navText:hover::after {
+         display: block;
+         animation-name: underlined;
+         animation-duration: 0.5s;
+        }
+
+        @keyframes underlined {
+          from {width: 0;}
+          to {width: 100%;}
+        }
+      }
+    }
+
+   
+
     .burgerMenu {
       z-index: 20;
       width: 40px;
       height: 30px;
+     
+      @media only screen and (min-width: 1280px) {
+        width: 35px;
+        height: 25px;
+      }
+
+      @media only screen and (min-width: 768px) {
+        display: none;
+     }
+    
       cursor: pointer;
       display: flex;
       flex-direction: column;

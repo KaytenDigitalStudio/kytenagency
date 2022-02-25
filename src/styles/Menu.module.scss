@@ -32,7 +32,11 @@
     align-items: center;
     flex-direction: column;
     ul li a {
-      @include menu-text;
+      @include menu-text(68px);
+      @media only screen and (min-width: 1280px) {
+        @include menu-text(58px);
+
+      }
     }
     ul li a:link,
     ul li a:visited {
@@ -87,8 +91,14 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    @media only screen and (min-width: 1280px) {
+      margin-top: auto;
+    }
     ul li a {
-      @include menu-text;
+      @include menu-text(68px);
+      @media only screen and (min-width: 1280px) {
+        @include menu-text(58px);
+      }
       height: 100%;
     }
     ul li a:link,
@@ -106,6 +116,9 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      @media only screen and (min-width: 1280px) {
+      justify-content: space-evenly;
+      }
     }
     li {
       display: flex;

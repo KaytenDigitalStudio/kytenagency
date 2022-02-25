@@ -39,17 +39,18 @@
       }
       height: 568px;
       .topic {
-        @include main-topic-text;
+        @include main-topic-text(20px);
       }
       .title {
-        @include main-title-text;
+        @include main-title-text(68px);
         margin-top: 15px;
         width: 602px;
       }
       .description {
         margin-top: 25px;
-        @include main-description-text;
+        @include main-description-text(16px);
       }
+      
     }
   }
 }
