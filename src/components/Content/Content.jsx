@@ -1,12 +1,14 @@
 import React from 'react';
 import classes from '../../styles/Content.module.scss';
-import Homepage from './Homepage/Homepage';
-import Services from './Services/Services';
+import About from './About';
+import Homepage from './Homepage';
+import Services from './Services';
 
 function Content() {
   return (
     <div className={classes.content}>
       <Homepage />
+      <About />
       <Services />
     </div>
   );

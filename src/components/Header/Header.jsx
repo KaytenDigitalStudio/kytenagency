@@ -6,7 +6,7 @@ import Menu from '../Header/Menu/Menu';
 function Header() {
   const [menuActive, setMenuActive] = useState(false);
 
-  const OpenMenu = (e) => {
+  const OpenMenu = () => {
     setMenuActive(!menuActive);
     menuActive ? setMenuActive(false) : setMenuActive(true);
   };
@@ -15,9 +15,22 @@ function Header() {
     <header className={classes.header}>
       <nav className={classes.nav}>
         <a href='/main' className={classes.logoGroup}>
-          <img className={classes.logo} src={logo} alt='Kayten Digital Logo' />
+          <img
+            className={classes.logo}
+            src={logo}
+            alt='Kayten Digital Logo'
+            draggable='false'
+          />
           <div className={classes.logoText}>Kyten Digital</div>
         </a>
+        <div
+          className={menuActive ? classes.burgerMenuActive : classes.burgerMenu}
+          onClick={OpenMenu}
+        >
+          <span className={classes.burgerLine}></span>
+          <span className={classes.burgerLine}></span>
+          <span className={classes.burgerLine}></span>
+        </div>
         {/* <ul className={classes.navMenu}>
           <li>
             <a href='#homepage' className={classes.navText}>
@@ -45,14 +58,6 @@ function Header() {
             </a>
           </li>
         </ul> */}
-        <div
-          className={menuActive ? classes.burgerMenuActive : classes.burgerMenu}
-          onClick={OpenMenu}
-        >
-          <span className={classes.burgerLine}></span>
-          <span className={classes.burgerLine}></span>
-          <span className={classes.burgerLine}></span>
-        </div>
       </nav>
       <Menu active={menuActive} setActive={setMenuActive} />
     </header>

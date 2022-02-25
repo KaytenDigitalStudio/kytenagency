@@ -6,6 +6,7 @@ const Menu = ({ active, setActive }) => {
     { value: 'Main', href: '#homepage' },
     { value: 'About', href: '#about' },
     { value: 'Services', href: '#services' },
+    { value: 'Work Flow', href: '#workflow' },
     { value: 'Portfolio', href: '/portfolio' },
     { value: 'Contacts', href: '/contacts' },
   ];

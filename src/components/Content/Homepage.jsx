@@ -1,14 +1,14 @@
-import React from 'react';
-import classes from '../../../styles/Homepage.module.scss';
-import ilustration from '../../../images/ilustrations/first.svg';
-import arrow from '../../../images/icons/arrow.svg';
+import React, { useState } from 'react';
+import classes from '../../styles/Homepage.module.scss';
+import ilustration from '../../images/ilustrations/first.svg';
+import arrow from '../../images/icons/arrow.svg';
 
 function Homepage() {
   return (
     <div className={classes.homepage} id='homepage'>
       <div className={classes.body}>
         <div className={classes.ilustration}>
-          <img src={ilustration} alt='' />
+          <img src={ilustration} alt='' draggable='false' />
         </div>
         <div className={classes.textBlock}>
           <p className={classes.topic}>BEST DESICION FOR YOUR BUSINESS</p>
@@ -23,9 +23,9 @@ function Homepage() {
           </button>
         </div>
       </div>
-      <div className={classes.scroll}>
+      <div className={classes.scrollShown}>
         <div className={classes.arrow}>
-          <img src={arrow} alt='' />
+          <img src={arrow} alt='' draggable='false' />
         </div>
         <div className={classes.scrollText}>Scroll down</div>
       </div>

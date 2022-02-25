@@ -2,70 +2,79 @@
 @import './mixins/texts';
 
 .services {
+  margin-top: 300px;
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  .body {
-    @media only screen and (min-width: 1640px) {
-      width: 1408px;
-      padding-top: 177px;
-    }
-    @media only screen and (min-width: 1440px) and (max-width: 1639px) {
-      width: 1114px;
-      padding-top: 157px;
-    }
-    height: 595px;
+  .topic {
+    @include main-topic-text;
+    align-self: flex-end;
+    margin-bottom: 14px;
+  }
+  .row {
+    width: 100%;
+    height: 377px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    .ilustration {
-      width: 585px;
-      height: 595px;
+    .icon {
+      align-self: center;
+      margin: 25px 0 30px 0;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
     }
-    .textBlock {
-      @media only screen and (min-width: 1640px) {
-        width: 525px;
-      }
-      @media only screen and (min-width: 1440px) and (max-width: 1639px) {
-        width: 431px;
-      }
-      height: 554px;
-      .topic {
-        @include main-topic-text;
-      }
-      .title {
-        @include main-title-text;
-        margin-top: 15px;
-      }
-      .description {
-        margin-top: 25px;
-        @include main-description-text;
-      }
-      .button {
-        width: 200px;
-        height: 83px;
-        background: none;
-        border: 0;
-        background-image: url(./../images/ilustrations/button.svg);
-        background-repeat: no-repeat;
-        cursor: pointer;
-        @media only screen and (min-width: 1640px) {
-          margin-top: 93px;
-        }
-        @media only screen and (min-width: 1440px) and (max-width: 1639px) {
-          margin-top: 77px;
-        }
-        @include main-button-text;
-        p {
-          margin-right: 12px;
-          margin-bottom: 7px;
-          top: 27px;
-          left: 44px;
-        }
-      }
+    .title {
+      @include title-text;
     }
+    .description {
+      @include description-text;
+    }
+    .design {
+      display: flex;
+      flex-direction: column;
+      width: 272px;
+      min-height: 100%;
+    }
+    .code {
+      width: 270px;
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .marketing {
+      min-height: 100%;
+      width: 305px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .elemOne {
+    position: absolute;
+    left: 50px;
+    top: 1850px;
+    z-index: -10;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .elemTwo {
+    position: absolute;
+    top: 2400px;
+    right: 180px;
+    z-index: -10;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
 }
