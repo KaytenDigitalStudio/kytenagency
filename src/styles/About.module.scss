@@ -39,39 +39,18 @@
       }
       height: 568px;
       .topic {
-        @include main-topic-text;
+        @include main-topic-text(20px);
       }
       .title {
-        @include main-title-text;
+        @include main-title-text(68px);
         margin-top: 15px;
         width: 602px;
       }
       .description {
         margin-top: 25px;
-        @include main-description-text;
+        @include main-description-text(16px);
       }
-      .button {
-        width: 200px;
-        height: 83px;
-        background: none;
-        border: 0;
-        background-image: url(./../images/ilustrations/button.svg);
-        background-repeat: no-repeat;
-        cursor: pointer;
-        @media only screen and (min-width: 1640px) {
-          margin-top: 93px;
-        }
-        @media only screen and (min-width: 1440px) and (max-width: 1639px) {
-          margin-top: 77px;
-        }
-        @include main-button-text;
-        p {
-          margin-right: 12px;
-          margin-bottom: 7px;
-          top: 27px;
-          left: 44px;
-        }
-      }
+      
     }
   }
 }
