@@ -1,0 +1,77 @@
+@use 'variables/colors';
+@import './mixins/texts';
+
+.about {
+  margin-top: 200px;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  .body {
+    width: 100%;
+    height: 595px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .ilustration {
+      width: 538.85px;
+      height: 538.85px;
+      order: 2;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    .textBlock {
+      @media only screen and (min-width: 1640px) {
+        width: 626px;
+      }
+      @media only screen and (min-width: 1440px) and (max-width: 1639px) {
+        width: 431px;
+      }
+      height: 568px;
+      .topic {
+        @include main-topic-text;
+      }
+      .title {
+        @include main-title-text;
+        margin-top: 15px;
+        width: 602px;
+      }
+      .description {
+        margin-top: 25px;
+        @include main-description-text;
+      }
+      .button {
+        width: 200px;
+        height: 83px;
+        background: none;
+        border: 0;
+        background-image: url(./../images/ilustrations/button.svg);
+        background-repeat: no-repeat;
+        cursor: pointer;
+        @media only screen and (min-width: 1640px) {
+          margin-top: 93px;
+        }
+        @media only screen and (min-width: 1440px) and (max-width: 1639px) {
+          margin-top: 77px;
+        }
+        @include main-button-text;
+        p {
+          margin-right: 12px;
+          margin-bottom: 7px;
+          top: 27px;
+          left: 44px;
+        }
+      }
+    }
+  }
+}

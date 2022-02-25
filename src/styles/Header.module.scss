@@ -22,8 +22,7 @@
     rgba(46, 9, 22, 0.89) 10.17%,
     rgba(32, 10, 43, 0.69) 105%
   );
-  backdrop-filter: blur(100px);
-  
+  backdrop-filter: blur(120px);
   a:link,
   a:visited,
   a:hover,
@@ -47,6 +46,7 @@
       height: 40px;
       z-index: 20;
       .logoText {
+        margin-left: 10px;
         text-transform: uppercase;
         font-family: 'Poppins';
         font-weight: 275;
@@ -57,6 +57,14 @@
         letter-spacing: 0.08em;
         color: colors.$white;
         text-decoration: none;
+      }
+      img {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
       }
     }
     .desktopMenu{
