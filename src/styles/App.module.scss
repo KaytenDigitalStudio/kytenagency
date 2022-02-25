@@ -16,7 +16,6 @@ body {
   background-attachment: fixed;
 }
 
-
 .main {
   position: relative;
   width: 100vw;
@@ -28,18 +27,16 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  
-    .wrapper {
-      @media (min-width: 1640px) {
-        width: 1440px;
-      }
-      @media (min-width: 1440px) and (max-width: 1639px) {
-        width: 1114px;
-      }
-      @media only screen and (min-width: 1280px) {
-        width: 960px;
-      }
+
+  .wrapper {
+    @media (min-width: 1640px) {
+      width: 1440px;
     }
+    @media (min-width: 1440px) and (max-width: 1639px) {
+      width: 1114px;
+    }
+    @media only screen and (min-width: 1280px) and (max-width: 1439px) {
+      width: 960px;
+    }
+  }
 }
-
-

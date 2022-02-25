@@ -31,7 +31,7 @@
   color: colors.$red-pink;
 }
 
-@mixin main-button-text($fontSize){
+@mixin main-button-text($fontSize) {
   font-family: Poppins;
   font-style: normal;
   font-weight: 600;
@@ -49,8 +49,6 @@
   font-size: $fontSize;
   line-height: 120%;
   /* or 16px */
-  display: flex;
-  align-items: center;
   text-align: center;
   color: colors.$pink;
 }
@@ -73,7 +71,7 @@
   line-height: 180%;
   /* or 36px */
   color: colors.$white;
-  opacity: 0.9;
+  opacity: 0.7;
 }
 
 @mixin menu-text($fontSize) {
@@ -92,8 +90,8 @@
 
 @mixin footer-allRights-text($fontSize) {
   font-family: Poppins;
-font-style: normal;
-font-weight: normal;
+  font-style: normal;
+  font-weight: normal;
   font-size: $fontSize;
   line-height: 180%;
   /* or 74px */
@@ -105,10 +103,10 @@ font-weight: normal;
 }
 @mixin footer-h1-text($fontSize) {
   font-family: Poppins;
-font-style: normal;
-font-weight: 900;
-font-size: $fontSize;
-line-height: 109%;
+  font-style: normal;
+  font-weight: 900;
+  font-size: $fontSize;
+  line-height: 109%;
   /* or 74px */
   display: flex;
   align-items: center;
@@ -118,10 +116,10 @@ line-height: 109%;
 }
 @mixin footer-p-text($fontSize) {
   font-family: Poppins;
-font-style: normal;
-font-weight: normal;
-font-size: $fontSize;
-line-height: 180%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $fontSize;
+  line-height: 180%;
   /* or 74px */
   display: flex;
   align-items: center;
@@ -132,12 +130,12 @@ line-height: 180%;
 }
 @mixin footer-button-text($fontSize) {
   font-family: Poppins;
-font-style: normal;
-font-weight: bold;
-font-size: $fontSize;
-line-height: 180%;
-letter-spacing: 0.05em;
-/* or 29px */
+  font-style: normal;
+  font-weight: bold;
+  font-size: $fontSize;
+  line-height: 180%;
+  letter-spacing: 0.05em;
+  /* or 29px */
   display: flex;
   align-items: center;
   text-align: center;

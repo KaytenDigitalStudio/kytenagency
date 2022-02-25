@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: column;
   .topic {
-    @include main-topic-text(50px);
+    @include main-topic-text(20px);
     align-self: flex-end;
     margin-bottom: 14px;
   }
@@ -29,10 +29,10 @@
       user-select: none;
     }
     .title {
-      @include title-text(68px);
+      @include title-text(48px);
     }
     .description {
-      @include description-text(16px);
+      @include description-text(20px);
     }
     .design {
       display: flex;
