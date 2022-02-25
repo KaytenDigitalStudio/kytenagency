@@ -1,14 +1,15 @@
 import React from 'react';
+import { Link } from 'react-scroll';
 import classes from '../../../styles/Menu.module.scss';
 
 const Menu = ({ active, setActive }) => {
   const items = [
-    { value: 'Main', href: '#homepage' },
-    { value: 'About', href: '#about' },
-    { value: 'Services', href: '#services' },
-    { value: 'Work Flow', href: '#workflow' },
-    { value: 'Portfolio', href: '/portfolio' },
-    { value: 'Contacts', href: '/contacts' },
+    { value: 'Main', href: 'homepage' },
+    { value: 'About', href: 'about' },
+    { value: 'Services', href: 'services' },
+    { value: 'Work Flow', href: 'workflow' },
+    { value: 'Portfolio', href: 'portfolio' },
+    { value: 'Contacts', href: 'contacts' },
   ];
 
   return (
@@ -21,9 +22,16 @@ const Menu = ({ active, setActive }) => {
         <ul>
           {items.map((items) => (
             <li key={items.value}>
-              <a href={items.href} onClick={() => setActive(false)}>
+              <Link
+                to={items.href}
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+                onClick={() => setActive(false)}
+              >
                 {items.value}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

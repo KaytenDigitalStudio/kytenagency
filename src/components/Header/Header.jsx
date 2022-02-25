@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-scroll';
 import logo from '../../images/logo/logo.svg';
 import classes from '../../styles/Header.module.scss';
 import Menu from '../Header/Menu/Menu';
@@ -11,10 +12,19 @@ function Header() {
     menuActive ? setMenuActive(false) : setMenuActive(true);
   };
 
+  const items = [
+    { value: 'Home', href: 'homepage' },
+    { value: 'About', href: 'about' },
+    { value: 'Services', href: 'services' },
+    { value: 'Work Flow', href: 'workflow' },
+    { value: 'Portfolio', href: 'portfolio' },
+    { value: 'Contacts', href: 'contacts' },
+  ];
+
   return (
     <header className={classes.header}>
       <nav className={classes.nav}>
-        <a href='/main' className={classes.logoGroup}>
+        <Link href='/' className={classes.logoGroup}>
           <img
             className={classes.logo}
             src={logo}
@@ -22,35 +32,24 @@ function Header() {
             draggable='false'
           />
           <div className={classes.logoText}>Kyten Digital</div>
-        </a>
+        </Link>
         <nav className={classes.desktopMenu}>
-        <ul className={classes.navMenu}>
-          <li>
-            <a href='#homepage' className={classes.navText}>
-              Home
-            </a>
-          </li>
-          <li>
-            <a href='#about' className={classes.navText}>
-              About
-            </a>
-          </li>
-          <li>
-            <a href='#services' className={classes.navText}>
-              Services
-            </a>
-          </li>
-          <li>
-            <a href='' className={classes.navText}>
-              Portfolio
-            </a>
-          </li>
-          <li>
-            <a href='' className={classes.navText}>
-              Contacts
-            </a>
-          </li>
-        </ul>
+          <ul className={classes.navMenu}>
+            {items.map((items) => (
+              <li key={items.value}>
+                <Link
+                  to={items.href}
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={500}
+                  className={classes.navText}
+                >
+                  {items.value}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </nav>
         <div
           className={menuActive ? classes.burgerMenuActive : classes.burgerMenu}

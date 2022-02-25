@@ -9,7 +9,8 @@ body {
     rgba(46, 9, 22, 0.897) 15.93%,
     rgba(32, 10, 43, 0.877) 79.07%
   );
-  backdrop-filter: brightness(70%);
+  // -webkit-backdrop-filter: brightness(70%);
+  // backdrop-filter: brightness(70%);
   box-shadow: 26px 24px 90px rgba(31, 26, 51, 0.13);
   margin: 0;
   background-repeat: no-repeat;
@@ -19,7 +20,7 @@ body {
 .main {
   position: relative;
   width: 100vw;
-  @media only screen and (min-width: 1280px) {
+  @media (min-width: 1280px) and (max-width: 1439px) {
     width: 100%;
   }
   width: 100%;
@@ -35,7 +36,7 @@ body {
     @media (min-width: 1440px) and (max-width: 1639px) {
       width: 1114px;
     }
-    @media only screen and (min-width: 1280px) and (max-width: 1439px) {
+    @media (min-width: 1280px) and (max-width: 1439px) {
       width: 960px;
     }
   }

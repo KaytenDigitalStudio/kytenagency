@@ -38,6 +38,7 @@
     ]
   },
   "devDependencies": {
+    "react-scroll": "^1.8.5",
     "sass": "^1.49.8"
   }
 }
