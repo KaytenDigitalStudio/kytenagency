@@ -89,3 +89,17 @@
   text-transform: uppercase;
   color: colors.$white;
 }
+
+@mixin footer-allRights-text($fontSize) {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 900;
+  font-size: $fontSize;
+  line-height: 109%;
+  /* or 74px */
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: colors.$white;
+}
