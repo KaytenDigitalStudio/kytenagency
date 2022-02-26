@@ -4,7 +4,7 @@ import About from './About';
 import Homepage from './Homepage';
 import Services from './Services';
 import Portfolio from './Portfolio';
-import WorkProcess from './WorkProcess';
+import WorkFlow from './WorkFlow';
 
 function Content() {
   return (
@@ -12,7 +12,7 @@ function Content() {
       <Homepage />
       <About />
       <Services />
-      <WorkProcess />
+      <WorkFlow />
       <Portfolio />
     </div>
   );

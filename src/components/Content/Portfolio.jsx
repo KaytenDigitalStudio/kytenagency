@@ -8,15 +8,14 @@ import nextprev from '../../images/icons/nextprev.svg';
 function SampleNextArrow(props) {
 const { className, style, onClick } = props;
 return (
-<img className={className} style={{ ...style, display: "block" } } src={nextprev} alt='' onClick={onClick} ></img>
-
+<img className={className} style={{ ...style, display: "block", transform: "scale(2)"} } src={nextprev} alt='' onClick={onClick} ></img>
 );
 }
 
 function SamplePrevArrow(props) {
 const { className, style, onClick } = props;
 return (
-<img className={className} style={{ ...style, display: "block", transform: "rotate(180deg)"} } src={nextprev} alt='' onClick={onClick} ></img>
+<img className={className} style={{ ...style, display: "block", transform: "rotate(180deg) scale(2)"} } src={nextprev} alt='' onClick={onClick} ></img>
 );
 }
 function Portfolio() {
