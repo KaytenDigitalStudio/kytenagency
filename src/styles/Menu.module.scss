@@ -21,6 +21,7 @@
     height: 100vh;
     backdrop-filter: blur(4px) brightness(40%);
     position: absolute;
+    z-index: 20;
   }
   .navigation {
     max-width: 1440px;
