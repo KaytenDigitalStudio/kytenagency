@@ -21,9 +21,9 @@ function Header() {
     { value: 'Home', href: 'homepage' },
     { value: 'About', href: 'about' },
     { value: 'Services', href: 'services' },
-    { value: 'Work Flow', href: 'workflow' },
+    { value: 'Work Flow', href: 'workFlow' },
     { value: 'Portfolio', href: 'portfolio' },
-    { value: 'Contacts', href: 'contacts' },
+    { value: 'Contacts', href: 'footer' },
   ];
 
   return (

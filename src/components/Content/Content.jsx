@@ -3,6 +3,8 @@ import classes from '../../styles/Content.module.scss';
 import About from './About';
 import Homepage from './Homepage';
 import Services from './Services';
+import Portfolio from './Portfolio';
+import WorkFlow from './WorkFlow';
 
 function Content() {
   return (
@@ -10,6 +12,8 @@ function Content() {
       <Homepage />
       <About />
       <Services />
+      <WorkFlow />
+      <Portfolio />
     </div>
   );
 }

@@ -1,0 +1,56 @@
+@use 'variables/colors';
+@import './mixins/texts';
+
+
+// 1440px
+.workFlow {
+    margin-top: 100px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 85vh;
+
+    .topic {
+        @include main-topic-text(20px);
+        align-self: flex-start;
+        margin-bottom: 14px;
+    }
+
+    .cardContainer {
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        width: 100%;
+        column-gap: 45px;
+
+        .card {
+            width: 400px;
+            height: 500px;
+            border-radius: 15px;
+            background-color: colors.$workflow-pink;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            padding: 25px 50px;
+            row-gap: 25px;
+            
+            img{
+                width: 135px;
+                height: 110px;
+            }
+
+            h1{
+                @include main-title-text(44px);
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+            p{
+                @include main-description-text(20px);
+                text-align: center;
+            }
+        }
+    }
+}
