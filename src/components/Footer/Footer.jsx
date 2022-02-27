@@ -75,7 +75,7 @@ function Footer() {
           </div>
         </div>
         <div className={classes.allRights}>
-          <img src={rights} className={classes.rights}></img>
+          <img src={rights} className={classes.rights} alt=''></img>
           2021-2022. Kyten Digital Studio All rights reserved.
         </div>
       </div>
