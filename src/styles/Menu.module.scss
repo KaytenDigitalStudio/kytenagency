@@ -13,6 +13,9 @@
   align-items: center;
   flex-direction: column;
   transform: translateX(-100%);
+  @media (min-width: 390px) and (max-width: 428px) {
+    transform: translateX(-200%);
+  }
   .blur {
     width: 100vw;
     height: 100vh;
@@ -35,7 +38,6 @@
       @include menu-text(68px);
       @media only screen and (min-width: 1280px) {
         @include menu-text(58px);
-
       }
     }
     ul li a:link,
@@ -117,7 +119,7 @@
       flex-direction: column;
       justify-content: space-between;
       @media only screen and (min-width: 1280px) {
-      justify-content: space-evenly;
+        justify-content: space-evenly;
       }
     }
     li {

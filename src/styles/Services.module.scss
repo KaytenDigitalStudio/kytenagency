@@ -7,10 +7,16 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  @media (min-width: 390px) and (max-width: 428px) {
+    margin-top: 136px;
+  }
   .topic {
     @include main-topic-text(20px);
     align-self: flex-end;
     margin-bottom: 14px;
+    @media (min-width: 390px) and (max-width: 428px) {
+      text-align: center;
+    }
   }
   .row {
     width: 100%;
@@ -18,6 +24,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (min-width: 390px) and (max-width: 428px) {
+      flex-direction: column;
+      height: 1042px;
+    }
     .icon {
       align-self: center;
       margin: 25px 0 30px 0;
@@ -27,30 +37,61 @@
       -moz-user-select: none;
       -ms-user-select: none;
       user-select: none;
+      @media (min-width: 390px) and (max-width: 428px) {
+        margin: 25px 0 30px 0;
+        width: 45px;
+        height: 45px;
+      }
+      img {
+        width: 45px;
+        height: 45px;
+      }
     }
     .title {
       @include title-text(48px);
+      @media (min-width: 390px) and (max-width: 428px) {
+        @include main-title-text(48px);
+        text-align: center;
+        width: 330px;
+      }
     }
     .description {
       @include description-text(20px);
+      @media (min-width: 390px) and (max-width: 428px) {
+        text-align: center;
+      }
     }
     .design {
       display: flex;
       flex-direction: column;
       width: 272px;
       min-height: 100%;
+      @media (min-width: 390px) and (max-width: 428px) {
+        width: 330px;
+        min-height: 305px;
+      }
     }
     .code {
       width: 270px;
       min-height: 100%;
       display: flex;
       flex-direction: column;
+      @media (min-width: 390px) and (max-width: 428px) {
+        width: 330px;
+        min-height: 300px;
+        margin-top: 50px;
+      }
     }
     .marketing {
       min-height: 100%;
       width: 305px;
       display: flex;
       flex-direction: column;
+      @media (min-width: 390px) and (max-width: 428px) {
+        width: 330px;
+        min-height: 346px;
+        margin-top: 50px;
+      }
     }
   }
   .elemOne {
@@ -64,6 +105,14 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    @media (min-width: 390px) and (max-width: 428px) {
+      position: absolute;
+      left: 10px;
+      top: 1733px;
+      opacity: 0.65;
+      width: 550px;
+      height: 560px;
+    }
   }
   .elemTwo {
     position: absolute;
@@ -76,5 +125,14 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    @media (min-width: 390px) and (max-width: 428px) {
+      position: absolute;
+      width: 640px;
+      height: 492px;
+      left: 70px;
+      top: 2529px;
+
+      opacity: 0.55;
+    }
   }
 }

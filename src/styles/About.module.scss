@@ -9,6 +9,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  @media (min-width: 390px) and (max-width: 428px) {
+    margin-top: 0;
+  }
   .body {
     width: 100%;
     height: 595px;
@@ -20,8 +23,11 @@
       height: 538.85px;
       order: 2;
       img {
-        width: 100%;
-        height: 100%;
+        width: 538.85px;
+        height: 538.85px;
+        @media (min-width: 390px) and (max-width: 428px) {
+          opacity: 0.5;
+        }
       }
       -webkit-touch-callout: none;
       -webkit-user-select: none;
@@ -29,6 +35,13 @@
       -moz-user-select: none;
       -ms-user-select: none;
       user-select: none;
+      @media (min-width: 390px) and (max-width: 428px) {
+        position: absolute;
+        width: 538.85px;
+        height: 538.85px;
+        left: -255px;
+        top: 926px;
+      }
     }
     .textBlock {
       @media only screen and (min-width: 1640px) {
@@ -37,18 +50,34 @@
       @media only screen and (min-width: 1440px) and (max-width: 1639px) {
         width: 431px;
       }
+      @media (min-width: 390px) and (max-width: 428px) {
+        width: 330px;
+        height: 564px;
+        z-index: 2;
+      }
       height: 568px;
       .topic {
         @include main-topic-text(20px);
+        @media (min-width: 390px) and (max-width: 428px) {
+          text-align: center;
+        }
       }
       .title {
         @include main-title-text(68px);
         margin-top: 15px;
         width: 602px;
+        @media (min-width: 390px) and (max-width: 428px) {
+          @include main-title-text(48px);
+          text-align: center;
+          width: 330px;
+        }
       }
       .description {
         margin-top: 25px;
         @include main-description-text(16px);
+        @media (min-width: 390px) and (max-width: 428px) {
+          text-align: center;
+        }
       }
     }
   }

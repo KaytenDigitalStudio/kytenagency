@@ -9,6 +9,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  @media (min-width: 390px) and (max-width: 428px) {
+    padding-top: 60px;
+  }
   .body {
     width: 100%;
     height: auto;
@@ -20,6 +23,9 @@
     }
     @media only screen and (min-width: 1280px) and (max-width: 1439px) {
       padding-top: 27px;
+    }
+    @media (min-width: 390px) and (max-width: 428px) {
+      margin-top: 127px;
     }
     display: flex;
     justify-content: space-between;
@@ -36,6 +42,15 @@
           height: 100%;
         }
       }
+      @media (min-width: 390px) and (max-width: 428px) {
+        opacity: 0.3;
+        filter: blur(4px);
+        position: absolute;
+        width: 411px;
+        height: 394px;
+        left: 104px;
+        top: 157px;
+      }
       -webkit-touch-callout: none;
       -webkit-user-select: none;
       -khtml-user-select: none;
@@ -44,6 +59,7 @@
       user-select: none;
     }
     .textBlock {
+      height: 554px;
       @media only screen and (min-width: 1640px) {
         width: 525px;
       }
@@ -56,17 +72,28 @@
         display: flex;
         flex-direction: column;
       }
-      height: 554px;
+      @media (min-width: 390px) and (max-width: 428px) {
+        width: 330px;
+        height: 572px;
+      }
       .topic {
         @include main-topic-text(20px);
         @media only screen and (min-width: 1280px) and (max-width: 1439px) {
           @include main-topic-text(15px);
+        }
+        @media (min-width: 390px) and (max-width: 428px) {
+          text-align: center;
+          @include main-topic-text(20px);
         }
       }
       .title {
         @include main-title-text(68px);
         @media only screen and (min-width: 1280px) and (max-width: 1439px) {
           @include main-title-text(58px);
+        }
+        @media (min-width: 390px) and (max-width: 428px) {
+          @include main-title-text(48px);
+          text-align: center;
         }
         margin-top: 15px;
       }
@@ -75,6 +102,9 @@
         @include main-description-text(16px);
         @media only screen and (min-width: 1280px) and (max-width: 1439px) {
           @include main-description-text(12px);
+        }
+        @media (min-width: 390px) and (max-width: 428px) {
+          text-align: center;
         }
       }
       .button {
@@ -85,14 +115,13 @@
         background-image: url(./../images/ilustrations/button.svg);
         background-repeat: no-repeat;
         cursor: pointer;
-        @media only screen and (min-width: 1640px) {
+        @media (min-width: 1640px) {
           margin-top: 93px;
         }
-        @media only screen and (min-width: 1440px) and (max-width: 1639px) {
+        @media (min-width: 1440px) and (max-width: 1639px) {
           margin-top: 77px;
         }
-        @include main-button-text(16px);
-        @media only screen and (min-width: 1280px) and (max-width: 1439px) {
+        @media (min-width: 1280px) and (max-width: 1439px) {
           @include main-button-text(12px);
           width: 170px;
           height: 63px;
@@ -100,6 +129,14 @@
           margin-top: 30px;
           align-self: flex-end;
         }
+        @media (min-width: 390px) and (max-width: 428px) {
+          justify-self: center;
+          align-self: center;
+          width: 190px;
+          margin: 37px 70px 0 70px;
+        }
+        @include main-button-text(16px);
+
         p {
           margin-right: 12px;
           margin-bottom: 7px;

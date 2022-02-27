@@ -12,6 +12,11 @@ function Header() {
     menuActive ? setMenuActive(false) : setMenuActive(true);
   };
 
+  const ClickAndClose = (e) => {
+    e.preventDefault();
+    setMenuActive(false);
+  };
+
   const items = [
     { value: 'Home', href: 'homepage' },
     { value: 'About', href: 'about' },
@@ -24,7 +29,15 @@ function Header() {
   return (
     <header className={classes.header}>
       <nav className={classes.nav}>
-        <Link href='/' className={classes.logoGroup}>
+        <Link
+          to='homepage'
+          spy={true}
+          smooth={true}
+          offset={-100}
+          duration={500}
+          className={classes.logoGroup}
+          onClick={ClickAndClose}
+        >
           <img
             className={classes.logo}
             src={logo}
