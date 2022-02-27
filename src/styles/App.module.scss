@@ -30,7 +30,7 @@ body {
   flex-direction: column;
 
   .wrapper {
-    @media (min-width: 1640px) {
+    @media (min-width: 1640px) and (max-width: 1920px) {
       width: 1440px;
     }
     @media (min-width: 1440px) and (max-width: 1639px) {
