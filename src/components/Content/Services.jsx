@@ -8,7 +8,7 @@ import fourth from '../../images/ilustrations/fourth.svg';
 
 function Services() {
   return (
-    <div className={classes.services} id='services'>
+    <section className={classes.services} id='services'>
       <p className={classes.topic}>Services</p>
       <div className={classes.row}>
         <div className={classes.design}>
@@ -42,7 +42,7 @@ function Services() {
       </div>
       <img className={classes.elemOne} src={third} alt='' draggable='false' />
       <img className={classes.elemTwo} src={fourth} alt='' draggable='false' />
-    </div>
+    </section>
   );
 }
 

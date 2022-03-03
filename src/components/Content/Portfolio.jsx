@@ -32,7 +32,7 @@ prevArrow:
 <SamplePrevArrow />,
 }
 return (
-<div className={classes.portfolio} id='portfolio'>
+<section className={classes.portfolio} id='portfolio'>
   <p className={classes.topic}>Portfolio</p>
 
   <Slider {...settings} className={classes.slider}>
@@ -44,7 +44,7 @@ return (
 
 
 
-</div>
+</section>
 );
 }
 

@@ -5,21 +5,24 @@ import Content from './Content/Content';
 import Footer from './Footer/Footer';
 
 
+
 function App() {
-  return (
-   
-    <main className={classes.main}>
-      
-        <Header />
-      <div className={classes.wrapper}>
-        <Content />
-      </div>
-      <Footer />
-     
-      
-    </main>
  
-  );
+
+return (
+
+<main className={classes.main}>
+
+  <Header />
+  <div className={classes.wrapper}>
+    <Content />
+  </div>
+  <Footer />
+
+
+</main>
+
+);
 }
 
 export default App;

@@ -4,7 +4,7 @@ import about from '../../images/ilustrations/about.png';
 
 function AboutUs() {
   return (
-    <div className={classes.about} id='about'>
+    <section className={classes.about} id='about'>
       <div className={classes.body}>
         <div className={classes.ilustration}>
           <img src={about} alt='' draggable='false' />
@@ -22,7 +22,7 @@ function AboutUs() {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

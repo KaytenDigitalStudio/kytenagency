@@ -9,39 +9,44 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+
   @media (min-width: 390px) and (max-width: 428px) {
     padding-top: 60px;
   }
+
   .body {
     width: 100%;
     height: auto;
+
     @media only screen and (min-width: 1640px) {
       padding-top: 57px;
     }
+
     @media only screen and (min-width: 1440px) and (max-width: 1639px) {
       padding-top: 37px;
     }
+
     @media only screen and (min-width: 1280px) and (max-width: 1439px) {
       padding-top: 27px;
     }
+
     @media (min-width: 390px) and (max-width: 428px) {
       margin-top: 127px;
     }
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     .ilustration {
-      width: 585px;
-      height: 595px;
-      @media (min-width: 1280px) and (max-width: 1439px) {
-        width: 435px;
-        height: 445px;
-        img {
-          width: 100%;
-          height: 100%;
-        }
+      width: calc((100vw * 35) / 100);
+      height: calc(((100vw * 35) / 100) - 20px);
+
+      img {
+        width: 100%;
+        height: 100%;
       }
+
       @media (min-width: 390px) and (max-width: 428px) {
         opacity: 0.3;
         filter: blur(4px);
@@ -51,6 +56,7 @@
         left: 104px;
         top: 157px;
       }
+
       -webkit-touch-callout: none;
       -webkit-user-select: none;
       -khtml-user-select: none;
@@ -58,55 +64,61 @@
       -ms-user-select: none;
       user-select: none;
     }
+
     .textBlock {
       height: 554px;
+      width: calc((100vw * 35) / 100);
+
       @media only screen and (min-width: 1640px) {
         width: 525px;
       }
-      @media only screen and (min-width: 1440px) and (max-width: 1639px) {
-        width: 431px;
-      }
-      @media only screen and (min-width: 1280px) and (max-width: 1439px) {
-        width: 431px;
-        height: 450px;
-        display: flex;
-        flex-direction: column;
-      }
+
+      // @media only screen and (min-width: 1440px) and (max-width: 1639px) {
+      //   // width: 431px;
+      //   width: calc((100vw * 35) / 100);
+      // }
+      // @media only screen and (min-width: 1280px) and (max-width: 1439px) {
+      //   width: 431px;
+      //   height: 450px;
+      //   display: flex;
+      //   flex-direction: column;
+      // }
       @media (min-width: 390px) and (max-width: 428px) {
         width: 330px;
         height: 572px;
       }
+
       .topic {
         @include main-topic-text(20px);
-        @media only screen and (min-width: 1280px) and (max-width: 1439px) {
-          @include main-topic-text(15px);
-        }
+
         @media (min-width: 390px) and (max-width: 428px) {
           text-align: center;
           @include main-topic-text(20px);
         }
       }
+
       .title {
         @include main-title-text(68px);
-        @media only screen and (min-width: 1280px) and (max-width: 1439px) {
-          @include main-title-text(58px);
-        }
+
         @media (min-width: 390px) and (max-width: 428px) {
           @include main-title-text(48px);
           text-align: center;
         }
+
         margin-top: 15px;
       }
+
       .description {
         margin-top: 25px;
         @include main-description-text(16px);
-        @media only screen and (min-width: 1280px) and (max-width: 1439px) {
-          @include main-description-text(12px);
-        }
+
+       
+
         @media (min-width: 390px) and (max-width: 428px) {
           text-align: center;
         }
       }
+
       .button {
         width: 200px;
         height: 83px;
@@ -115,12 +127,15 @@
         background-image: url(./../images/ilustrations/button.svg);
         background-repeat: no-repeat;
         cursor: pointer;
+
         @media (min-width: 1640px) {
           margin-top: 93px;
         }
+
         @media (min-width: 1440px) and (max-width: 1639px) {
           margin-top: 77px;
         }
+
         @media (min-width: 1280px) and (max-width: 1439px) {
           @include main-button-text(12px);
           width: 170px;
@@ -129,12 +144,14 @@
           margin-top: 30px;
           align-self: flex-end;
         }
+
         @media (min-width: 390px) and (max-width: 428px) {
           justify-self: center;
           align-self: center;
           width: 190px;
           margin: 37px 70px 0 70px;
         }
+
         @include main-button-text(16px);
 
         p {
@@ -142,6 +159,7 @@
           margin-bottom: 7px;
           top: 27px;
           left: 44px;
+
           @media only screen and (min-width: 1280px) and (max-width: 1439px) {
             margin-right: 26px;
             margin-bottom: 3px;
@@ -152,6 +170,7 @@
       }
     }
   }
+
   .scrollShown {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -164,6 +183,7 @@
     padding-bottom: 10px;
     transition: all 0.6s 0s ease;
     opacity: 1;
+
     .arrow {
       width: 100%;
       height: 34px;
@@ -174,24 +194,29 @@
       animation-duration: 2s;
       animation-iteration-count: infinite;
       animation-direction: alternate;
+
       @keyframes movingTop {
         0% {
           transform: translateY(0px);
         }
+
         100% {
           transform: translateY(7px);
         }
       }
+
       img {
         width: 60%;
       }
     }
+
     .scrollText {
       width: 74px;
       height: 32px;
       @include main-scroll-text(13px);
     }
   }
+
   .scrollHidden {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -205,25 +230,31 @@
     visibility: hidden;
     transition: all 0.6s 0s ease;
     opacity: 0;
+
     .arrow {
       width: 100%;
       height: 34px;
+
       @media only screen and (min-width: 1280px) and (max-width: 1439px) {
         width: 100%;
         height: 34px;
       }
+
       display: flex;
       justify-content: center;
       align-items: center;
+
       img {
         width: 60%;
       }
     }
+
     .scrollText {
       width: 74px;
       height: 32px;
       text-align: center;
       @include main-scroll-text(13px);
+
       @media only screen and (min-width: 1280px) and (max-width: 1439px) {
         width: 50px;
         height: 32px;

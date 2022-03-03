@@ -5,10 +5,16 @@ import Homepage from './Homepage';
 import Services from './Services';
 import Portfolio from './Portfolio';
 import WorkFlow from './WorkFlow';
+import ScrollBar from '../ScrollBar/ScrollBar.jsx';
 
 function Content() {
+
+  
+
   return (
-    <div className={classes.content}>
+    <div className={classes.content} >
+      <ScrollBar />
+
       <Homepage />
       <About />
       <Services />

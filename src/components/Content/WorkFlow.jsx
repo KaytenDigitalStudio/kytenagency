@@ -7,7 +7,7 @@ import thirdStep from '../../images/icons/workflow-third-step.svg';
 
 function WorkFlow() {
 return (
-<div className={classes.workFlow} id='workFlow'>
+<section className={classes.workFlow} id='workFlow'>
   <p className={classes.topic}>Work Flow</p>
   <div className={classes.cardContainer}>
     <div className={classes.card}>
@@ -29,7 +29,7 @@ return (
       </p>
     </div>
   </div>
-</div>
+</section>
 );
 }
 

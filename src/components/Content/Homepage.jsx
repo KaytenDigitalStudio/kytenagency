@@ -20,7 +20,7 @@ function Homepage() {
   }, []);
 
   return (
-    <div className={classes.homepage} id='homepage'>
+    <section className={classes.homepage} id='homepage'>
       <div className={classes.body}>
         <div className={classes.ilustration}>
           <img src={ilustration} alt='' draggable='false' />
@@ -48,7 +48,7 @@ function Homepage() {
         </div>
         <div className={classes.scrollText}>Scroll<br />down</div>
       </div>
-    </div>
+    </section>
   );
 }
 
