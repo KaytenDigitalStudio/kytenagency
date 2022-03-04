@@ -47,7 +47,7 @@ function ScrollBar() {
 
   return ( 
     < ul className={ classes.navigation } id='navigation'>
-      <li li className={ classes.selected }></li>
+      <li className={ classes.selected }></li>
         <li></li>
         <li></li>
         <li></li>
