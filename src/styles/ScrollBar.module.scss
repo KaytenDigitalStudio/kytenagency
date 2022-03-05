@@ -22,7 +22,7 @@
     border: 1px solid white;
     }
 
-    li:hover {
+    li:hover, li.selected {
       background-color: #ffffff;
   }
   }
