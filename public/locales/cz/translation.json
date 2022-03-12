@@ -1,0 +1,82 @@
+{
+  "navigation": {
+    "home": "Domů",
+    "about": "O Nás",
+    "services": "Služby",
+    "workflow": "Průběh Práce",
+    "portfolio": "Portfolio",
+    "contacts": "Kontakty"
+  },
+
+  "home": {
+    "topic": "NEJLEPŠÍ VOLBA PRO VAŠE PODNIKÁN",
+    "title": "ZVYŠTE SVÉ ZISKY NA INTERNETU",
+    "desc": "Svěřte nám svůj podnik online. Dnes více než kdy jindy potřebujete online řešení pro každou firmu, od prodeje oblečení až po stavební firmy. Umožní vám větší dosah, přiláká nové zákazníky a v konečném důsledku zvýší příjmy.",
+    "button": "Odeslat poptávku",
+    "scroll": "Posunout dolů"
+  },
+
+  "about": {
+    "topic": "O Nás",
+    "title": "VYTVÁŘÍME WEB STRÁNKY JAKÉKOLIV SLOŽITOSTI PRO JAKOUKOLIV FIRMU.",
+    "desc": "Náš profesionální tým je připraven splnit každý váš požadavek a vyřešit váš problém. Používáme pouze pokročilé a moderní technologie dostupné na trhu a vaše přání realizujeme tím nejlepším způsobem. Vaše přání jsou naším zájmem."
+  },
+
+  "services": {
+    "topic": "Služby",
+    "design_title": "DESIGN STRÁNEK",
+    "design_desc": "Vytvoření jedinečného a čistého uživatelsky přívětivého designu pro vaše potřeby.",
+    "creation_title": "TVORBA STRÁNEK",
+    "creation_desc": "Postaráme se o technologickou stránku vašich potřeb.",
+    "promotion_title": "CÍLENÁ PROPAGACE",
+    "promotion_desc": "Pomůžeme vám propagovat vaše stránky v reklamách Google, na Facebooku a Instagramu."
+  },
+
+  "workflow": {
+    "topic": "PRŮBĚH PRÁCE",
+    "one_title": "Sdělte nám své potřeby",
+    "one_desc": "Po vyslechnutí vašich přání uděláme vše pro splnění vašich cílů.",
+    "two_title": "vývoj nejlepšího řešení",
+    "two_desc": "Nechte nám všechny ty nejasné technické termíny. Vezmeme to z technického hlediska.",
+    "three_title": "dodání kvalitního pruduktu",
+    "three_desc": "Konečná přímka, po kontrole kvality a schválení, váš výrobek brzy spatří světlo světa."
+  },
+
+  "ourworks": {
+    "topic": "Naše projekty",
+    "first_type": "Blog",
+    "second_type": "Rozvoz",
+    "third_type": "Pojišťovna",
+    "fourth_type": "Cestovní firma"
+  },
+
+  "form": {
+    "title": "Chcete se dozvědět více?",
+    "subtitle": "Máme rádi dotazy a zpětnou vazbu - a vždy rádi pomůžeme!",
+    "name": "Jméno",
+    "email": "Email",
+    "phone": "Telefon",
+    "service": {
+      "text": "Potřebná služba",
+      "select": "Zvolte službu",
+      "option_two": "Design Web Stránek",
+      "option_three": "Tvorba Web Stránek",
+      "option_four": "Propagace",
+      "option_five": "Jiné"
+    },
+    "message": "Zpráva",
+    "button": "Odeslat"
+  },
+
+  "contacts": {
+    "title": "Kontakty",
+    "office": {
+      "title": "Kancelář",
+      "text": "Praha, Česká Republika"
+    },
+    "questions": "Otázky",
+    "tech": "Tech"
+  },
+
+  "footer_rights": "Všechna práva vyhrazena."
+}

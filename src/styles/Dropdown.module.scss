@@ -1,0 +1,72 @@
+@use 'variables/colors';
+@import './mixins/texts';
+
+.dropdown {
+  width: 48%;
+  height: auto;
+  position: relative;
+  user-select: none;
+  color: black;
+  flex-direction: column;
+  label {
+    color: colors.$white;
+    text-transform: uppercase;
+    @include footer-p-text(16px);
+  }
+  .button {
+    height: 30px;
+    width: 100%;
+    padding: 0 0.8rem 0 0.2rem;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: colors.$white;
+    border-radius: 3px;
+    cursor: pointer;
+    // color: rgba(0, 0, 0, 0.5);
+    .iconNotActive {
+      width: 15px;
+      height: 15px;
+      transition: all 0.4s ease;
+    }
+    .iconActive {
+      width: 15px;
+      height: 15px;
+      transform: rotateZ(180deg);
+      transition: all 0.2s ease;
+    }
+  }
+  .contentActive {
+    position: absolute;
+    top: 110%;
+    background: colors.$white;
+    z-index: 2;
+    box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.18);
+    border-radius: 0 0 3px 3px;
+    visibility: visible;
+    .item {
+      cursor: pointer;
+      padding: 5px 15px;
+      transition: all 0.2s;
+      &:hover {
+        background: #00f0ff;
+      }
+    }
+  }
+  .contentNotActive {
+    position: absolute;
+    top: 110%;
+    background: colors.$white;
+    z-index: 2;
+    box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.18);
+    border-radius: 0 0 3px 3px;
+    visibility: hidden;
+    .item {
+      padding: 5px 15px;
+      &:hover {
+        background: #00f0ff;
+      }
+    }
+  }
+}

@@ -4,15 +4,15 @@ import About from './About';
 import Homepage from './Homepage';
 import Services from './Services';
 import Portfolio from './Portfolio';
-import WorkFlow from './WorkFlow';
+import Workflow from './Workflow';
 
-function Content() {
+function Content(t) {
   return (
     <div className={classes.content}>
-      <Homepage />
+      <Homepage t={t} />
       <About />
       <Services />
-      <WorkFlow />
+      <Workflow />
       <Portfolio />
     </div>
   );

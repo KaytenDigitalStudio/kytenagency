@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import classes from '../../../styles/Form.module.scss';
 import { initializeApp } from 'firebase/app';
 import { getDatabase, ref, push, set } from 'firebase/database';
+import Dropdown from './Dropdown/Dropdown';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyAVhDtOqLGAdCA1vcjHXPOnfkEzjpleY3c',
@@ -26,12 +28,13 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
 function Form() {
+  const { t } = useTranslation();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [service, setService] = useState('');
   const [message, setMessage] = useState('');
-
+  const [selected, setSelected] = useState('');
   const handleSubmit = (e) => {
     e.preventDefault();
     const postListRef = ref(db, 'datas');
@@ -53,76 +56,60 @@ function Form() {
 
   return (
     <form className={classes.form} onSubmit={handleSubmit} id='contacts'>
-      {/* <div className={classes.ilustration}>
-          <img src={about} alt='' draggable='false' />
-          </div> */}
-
-      <h1>Contact Us</h1>
-      <p className={classes.description}>
-        We love questions and feedback - and we’re always happy to help!
-      </p>
-      <div className={classes.inputs}>
-        <div className={classes.inpContainer}>
-          <input
-            type='text'
-            name='name'
-            value={name}
-            placeholder='Pavel'
-            required
-            onChange={(e) => setName(e.target.value)}
-          />
+      <div className={classes.body}>
+        <h1>{t('form.title')}</h1>
+        <p className={classes.description}>{t('form.subtitle')}</p>
+        <div className={classes.inputs}>
+          <div className={classes.inpContainer}>
+            <label htmlFor='name'>{t('form.name')}*:</label>
+            <input
+              type='text'
+              name='name'
+              value={name}
+              placeholder='Pavel'
+              required
+              onChange={(e) => setName(e.target.value)}
+            />
+          </div>
+          <div className={classes.inpContainer}>
+            <label htmlFor='email'>{t('form.email')}*:</label>
+            <input
+              type='email'
+              name='email'
+              value={email}
+              placeholder='example@email.com'
+              required
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+          <div className={classes.inpContainer}>
+            <label htmlFor='phone'>{t('form.phone')}:</label>
+            <input
+              type='tel'
+              name='phone'
+              value={phone}
+              placeholder='+420 123 345 567'
+              minLength='5'
+              maxLength='15'
+              onChange={(e) => setPhone(e.target.value)}
+            />
+          </div>
+          <Dropdown selected={selected} setSelected={setSelected} />
+          <div className={classes.inpContainer}>
+            <label htmlFor='message'>{t('form.message')}:</label>
+            <textarea
+              type='text'
+              name='message'
+              value={message}
+              placeholder='Type, here your text...'
+              onChange={(e) => setMessage(e.target.value)}
+            />
+          </div>
         </div>
-        <div className={classes.inpContainer}>
-          <input
-            type='email'
-            name='email'
-            value={email}
-            placeholder='example@email.com'
-            required
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
-        <div className={classes.inpContainer}>
-          <input
-            type='text'
-            name='phone'
-            value={phone}
-            placeholder='+420 123 345 567'
-            min='5'
-            max='12'
-            onChange={(e) => setPhone(e.target.value)}
-          />
-        </div>
-        <div className={classes.inpContainer}>
-          <select
-            name='services'
-            id='select'
-            defaultValue={service}
-            required
-            onChange={(e) => setService(e.target.value)}
-          >
-            <option value='Def' disabled>
-              Select the service
-            </option>
-            <option value='Webdesign'>Webdesign</option>
-            <option value='Website Creation'>Website Creation</option>
-            <option value='Promotion'>Promotion</option>
-            <option value='Other'>Other</option>
-          </select>
-        </div>
-        <div className={classes.inpContainer}>
-          <textarea
-            type='text'
-            name='message'
-            value={message}
-            placeholder='Type, here your text...'
-            onChange={(e) => setMessage(e.target.value)}
-          />
-        </div>
+        <button className={classes.button}>
+          <p>{t('form.button')}</p>
+        </button>
       </div>
-      <button className={classes.button}>
-        <p>submit</p>
-      </button>
     </form>
   );
 }

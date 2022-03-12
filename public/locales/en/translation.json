@@ -1,0 +1,82 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "workflow": "Work Flow",
+    "portfolio": "Portfolio",
+    "contacts": "Contacts"
+  },
+
+  "home": {
+    "topic": "BEST DESICION FOR YOUR BUSINESS",
+    "title": "INCREASE YOUR PROFITS ONLINE",
+    "desc": "Trust us to bring your business online. Now more than ever, you need online solutions for every business, from clothing sales to construction businesses. It allows you to have more reach, attract new customers and ultimately increase revenue.",
+    "button": "Send Inquiry",
+    "scroll": "Scroll down"
+  },
+
+  "about": {
+    "topic": "ABOUT",
+    "title": "WE DEVELOP WEBSITES OF ANY COMPLEXITY FOR ANY BUSINESS",
+    "desc": "Our professional team is ready to fulfill your every request to solve your problem. Using only advanced, modern technologies available on the market we will implement your wishes in the best way. Your wishes are our concern."
+  },
+
+  "services": {
+    "topic": "SERVICES",
+    "design_title": "WEBSITE DESIGNING",
+    "design_desc": "Creation unique and clean userfriendly design for your needs.",
+    "creation_title": "WEBSITE CREATION",
+    "creation_desc": "We will take care of the technological side of your needs.",
+    "promotion_title": "TARGETED PROMOTION",
+    "promotion_desc": "We will help your site to be promoted in Google Ads., Facebook, Instagram."
+  },
+  "workflow": {
+    "topic": "WORK FLOW",
+    "one_title": "tell us your needs",
+    "one_desc": "After listening to your wishes, we will do everything possible to fulfill your goals.",
+    "two_title": "developing the best solution",
+    "two_desc": "Leave all those obscure technical terms to us. We'll take it from a technical perspective.",
+    "three_title": "deliver quality pruduct",
+    "three_desc": "The final straight line, after your quality control and approval, your product will soon be seen by the world."
+  },
+
+  "ourworks": {
+    "topic": "Our Works",
+    "first_type": "Blog",
+    "second_type": "Delivery",
+    "third_type": "Insurance Co.",
+    "fourth_type": "Travel Co."
+  },
+
+  "form": {
+    "title": "Want to know more?",
+    "subtitle": "We love questions and feedback - and we’re always happy to help!",
+    "name": "Name",
+    "email": "email",
+    "phone": "Phone",
+    "service": {
+      "text": "Needed service",
+      "select": "Select the service",
+      "option_two": "Webdesign",
+      "option_three": "Website Creation",
+      "option_four": "Promotion",
+      "option_five": "Other"
+    },
+
+    "message": "Message",
+    "button": "Submit"
+  },
+
+  "contacts": {
+    "title": "Contacts",
+    "office": {
+      "title": "Office",
+      "text": "Prague, Czech Republic"
+    },
+    "questions": "Questions",
+    "tech": "Tech"
+  },
+
+  "footer_rights": "All rights reserved."
+}

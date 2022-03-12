@@ -15,37 +15,43 @@ body {
   margin: 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  font-family: Poppins;
+  color: #ffff;
 }
 
-.main {
+.App {
   position: relative;
-  width: 100vw;
-  @media (min-width: 1280px) and (max-width: 1439px) {
-    width: 100%;
-  }
+  max-width: 100wh;
+  margin: 0 auto;
   width: 100%;
   min-height: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
-
   .wrapper {
-    flex: 1 1 auto;
-    @media (min-width: 1640px) {
-      width: 1440px;
-      padding-bottom: 180px;
-    }
-    @media (min-width: 1440px) and (max-width: 1639px) {
-      width: 1114px;
-      padding-bottom: 160px;
-    }
-    @media (min-width: 1280px) and (max-width: 1439px) {
-      width: 960px;
-      padding-bottom: 140px;
-    }
-    @media (min-width: 390px) and (max-width: 428px) {
-      width: 330px;
-      padding-bottom: 180px;
+    min-height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 100%;
+    .container {
+      flex: 1 1 auto;
+      margin: 0 auto;
+      @media all and (min-width: 1441px) {
+        width: 75%;
+        padding-bottom: 180px;
+      }
+      @media all and (max-width: 1440px) {
+        width: 77.36%;
+        padding-bottom: 160px;
+      }
+      @media all and (max-width: 1280px) {
+        width: 75%;
+        padding-bottom: 140px;
+      }
+      @media all and (max-width: 390px) {
+        width: 84.6%;
+        padding-bottom: 180px;
+      }
     }
   }
 }

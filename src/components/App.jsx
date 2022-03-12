@@ -4,21 +4,17 @@ import Header from './Header/Header';
 import Content from './Content/Content';
 import Footer from './Footer/Footer';
 
-
 function App() {
   return (
-   
-    <main className={classes.main}>
-      
-        <Header />
+    <div className={classes.App}>
       <div className={classes.wrapper}>
-        <Content />
+        <Header />
+        <div className={classes.container}>
+          <Content />
+        </div>
+        <Footer />
       </div>
-      <Footer />
-     
-      
-    </main>
- 
+    </div>
   );
 }
 

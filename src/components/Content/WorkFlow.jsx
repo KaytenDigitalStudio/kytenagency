@@ -1,36 +1,40 @@
 import React from 'react';
-import classes from '../../styles/WorkFlow.module.scss';
+import { useTranslation } from 'react-i18next';
+import classes from '../../styles/Workflow.module.scss';
 import arrow from '../../images/icons/workflow-arrow.svg';
-import firstStep from '../../images/icons/workflow-first-step.svg';
-import secondStep from '../../images/icons/workflow-second-step.svg';
-import thirdStep from '../../images/icons/workflow-third-step.svg';
+import firstStep from '../../images/icons/firstImage.svg';
+import secondStep from '../../images/icons/secondImage.svg';
+import thirdStep from '../../images/icons/thirdImage.svg';
 
-function WorkFlow() {
-return (
-<div className={classes.workFlow} id='workFlow'>
-  <p className={classes.topic}>Work Flow</p>
-  <div className={classes.cardContainer}>
-    <div className={classes.card}>
-      <img src={firstStep} alt="" />
-      <h1>tell us your needs</h1>
-      <p>After listening to your wishes, we will do everything possible to fulfill your goals.</p>
+function Workflow() {
+  const { t } = useTranslation();
+  return (
+    <div className={classes.workflow} id='workflow'>
+      <p className={classes.topic}>{t('workflow.topic')}</p>
+      <div className={classes.cardContainer}>
+        <div className={classes.card}>
+          <p className={classes.number}>1</p>
+          <img src={firstStep} alt='' className={classes.spots} />
+          <h2>{t('workflow.one_title')}</h2>
+          <p className={classes.description}>{t('workflow.one_desc')}</p>
+        </div>
+        <img src={arrow} alt='' className={classes.firstArrow} />
+        <div className={classes.card}>
+          <p className={classes.number}>2</p>
+          <img src={secondStep} alt='' className={classes.spots} />
+          <h2>{t('workflow.two_title')}</h2>
+          <p className={classes.description}>{t('workflow.two_desc')}</p>
+        </div>
+        <img src={arrow} alt='' className={classes.secondArrow} />
+        <div className={classes.card}>
+          <p className={classes.number}>3</p>
+          <img src={thirdStep} alt='' className={classes.spots} />
+          <h2>{t('workflow.three_title')}</h2>
+          <p className={classes.description}>{t('workflow.three_desc')}</p>
+        </div>
+      </div>
     </div>
-    <img src={arrow} alt="" />
-    <div className={classes.card}>
-      <img src={secondStep} alt="" />
-      <h1>developing the best solution</h1>
-      <p>Leave all those obscure technical terms to us. We'll take it from a technical perspective.</p>
-    </div>
-    <img src={arrow} alt="" />
-    <div className={classes.card}>
-      <img src={thirdStep} alt="" />
-      <h1>deliver quality pruduct</h1>
-      <p>The final straight line, after your quality control and approval, your product will soon be seen by the world.
-      </p>
-    </div>
-  </div>
-</div>
-);
+  );
 }
 
-export default WorkFlow;
+export default Workflow;

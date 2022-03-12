@@ -3,145 +3,154 @@
 
 .form {
   width: 60%;
-  height: auto;
-  border: 1px solid colors.$grey-white;
+  height: 100%;
+  border: 1px solid colors.$red-pink;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 2.5rem 2.5rem 1rem 2.5rem;
-  gap: 0.5rem;
-
-  @media (min-width: 390px) and (max-width: 428px) {
+  .body {
     width: 100%;
-    border: 0;
-  }
-
-  h1 {
-    @include footer-h1-text(40px);
-  }
-  .description {
-    margin: 0.6rem 0 1.7rem 0;
-    @media only screen and (min-width: 1640px) {
-      @include footer-p-text(14px);
-    }
-    @media only screen and (min-width: 1440px) and (max-width: 1639px) {
-      @include footer-p-text(12px);
-    }
-    @media only screen and (min-width: 1280px) and (max-width: 1439px) {
-      @include footer-p-text(10px);
-    }
-  }
-
-  .inputs {
+    height: 100%;
+    padding: 2.5rem 2.5rem 1rem 2.5rem;
+    gap: 0.5rem;
     display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    height: auto;
-    row-gap: 2rem;
-    padding: 1.5rem 0 1.5rem 0;
-    justify-content: space-between;
-
-    .inpContainer {
-      display: flex;
-      height: 30px;
-      width: 48%;
-      position: relative;
-      margin-bottom: 10px;
-      textarea {
-        resize: none;
-        width: 100%;
-        font-size: 18px;
-        padding-left: 0.2rem;
-        border: 0;
-        outline: none;
-        padding-top: 5px;
-      }
-      input,
-      select {
-        border: 0;
-        border-radius: 3px;
-        width: 100%;
-        height: 30px;
-        font-size: 18px;
-        padding-left: 0.2rem;
-        outline: none;
-      }
-    }
-    .inpContainer:nth-child(5) {
-      height: 3rem;
+    flex-direction: column;
+    justify-content: center;
+    @media all and (min-width: 390px) and (max-width: 428px) {
       width: 100%;
+      border: 0;
     }
 
-    .inpContainer::after {
-      display: block;
-      position: absolute;
-      height: 1rem;
-      width: auto;
-      top: -1.5rem;
-      @media only screen and (min-width: 1640px) {
-        @include footer-p-text(20px);
+    h1 {
+      @include footer-h1-text(40px);
+    }
+    .description {
+      margin: 0.6rem 0 1.7rem 0;
+      @media all and (min-width: 1640px) {
+        @include footer-p-text(14px);
       }
-      @media only screen and (min-width: 1440px) and (max-width: 1639px) {
-        @include footer-p-text(16px);
-      }
-      @media only screen and (min-width: 1280px) and (max-width: 1439px) {
+      @media all and (min-width: 1440px) and (max-width: 1639px) {
         @include footer-p-text(12px);
       }
-    }
-    .inpContainer:nth-child(1)::after {
-      content: 'Name*:';
-    }
-    .inpContainer:nth-child(2)::after {
-      content: 'Email*:';
-    }
-    .inpContainer:nth-child(3)::after {
-      content: 'phone:';
-    }
-    .inpContainer:nth-child(4)::after {
-      content: 'needed service*:';
-    }
-    .inpContainer:nth-child(5)::after {
-      content: 'message:';
-    }
-    .inpContainer:last-child {
-      height: 3.75rem;
-      input {
-        height: 3.75rem;
+      @media all and (min-width: 1280px) and (max-width: 1439px) {
+        @include footer-p-text(10px);
       }
     }
-  }
-  .button {
-    width: 120px;
-    height: 30px;
-    align-self: end;
-    background-color: colors.$red-pink;
-    border: 0;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    &:hover {
-      background-color: #f54969;
-    }
-    &:active {
-      background-color: #f34e6d;
-      transform: translateY(1px);
-    }
-  }
 
-  .button p {
-    text-align: center;
-    @media only screen and (min-width: 1640px) {
-      @include footer-button-text(16px);
+    .inputs {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      height: auto;
+      row-gap: 1rem;
+      padding: 0 0 1.5rem 0;
+      justify-content: space-between;
+
+      .inpContainer {
+        display: flex;
+        height: auto;
+        width: 48%;
+        position: relative;
+        flex-direction: column;
+        label {
+          @include footer-p-text(16px);
+          text-transform: uppercase;
+        }
+        textarea {
+          resize: none;
+          width: 100%;
+          font-size: 18px;
+          padding-left: 0.2rem;
+          border: 0;
+          padding-top: 5px;
+          border-radius: 3px;
+        }
+        input,
+        select {
+          border: 0;
+          border-radius: 3px;
+          width: 100%;
+          height: 30px;
+          font-size: 18px;
+          padding-left: 0.2rem;
+        }
+        input,
+        select,
+        textarea,
+        option {
+          outline: none;
+          font-family: Poppins;
+        }
+        option {
+          font-size: 20px;
+          font-family: Poppins;
+        }
+        input:focus,
+        input:active,
+        select:focus,
+        select:active,
+        textarea:focus,
+        textarea:active {
+          border-color: transparent;
+          border-bottom: 2px solid colors.$red-pink;
+        }
+      }
+      .inpContainer:nth-child(5) {
+        height: 3rem;
+        width: 100%;
+      }
+
+      .inpContainer::after {
+        display: block;
+        position: absolute;
+        height: 1rem;
+        width: auto;
+        top: -2rem;
+        @media all and (min-width: 1640px) {
+          @include footer-p-text(20px);
+        }
+        @media all and (min-width: 1440px) and (max-width: 1639px) {
+          @include footer-p-text(16px);
+        }
+        @media all and (min-width: 1280px) and (max-width: 1439px) {
+          @include footer-p-text(12px);
+        }
+      }
     }
-    @media only screen and (min-width: 1440px) and (max-width: 1639px) {
-      @include footer-button-text(14px);
+    .button {
+      width: 120px;
+      height: 35px;
+      align-self: end;
+      background-color: colors.$red-pink;
+      border: 0;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      margin-top: 20px;
+      &:hover {
+        background-color: #f54969;
+      }
+      &:active {
+        background-color: #f34e6d;
+        transform: translateY(1px);
+      }
     }
-    @media only screen and (min-width: 1280px) and (max-width: 1439px) {
-      @include footer-button-text(12px);
+
+    .button p {
+      text-align: center;
+      @media all and (min-width: 1640px) {
+        @include footer-button-text(16px);
+      }
+      @media all and (min-width: 1440px) and (max-width: 1639px) {
+        @include footer-button-text(14px);
+      }
+      @media all and (min-width: 1280px) and (max-width: 1439px) {
+        @include footer-button-text(12px);
+      }
     }
   }
 }

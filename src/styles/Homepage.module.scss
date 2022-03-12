@@ -9,44 +9,42 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  @media (min-width: 390px) and (max-width: 428px) {
+  @media (max-width: 390px) {
     padding-top: 60px;
   }
   .body {
     width: 100%;
     height: auto;
-    @media only screen and (min-width: 1640px) {
-      padding-top: 57px;
+    padding-top: 57px;
+    @media all and (max-width: 1440px) {
+      padding-top: 10px;
     }
-    @media only screen and (min-width: 1440px) and (max-width: 1639px) {
-      padding-top: 37px;
-    }
-    @media only screen and (min-width: 1280px) and (max-width: 1439px) {
+    @media all and (max-width: 1280px) {
       padding-top: 27px;
     }
-    @media (min-width: 390px) and (max-width: 428px) {
-      margin-top: 127px;
+    @media all and (max-width: 390px) {
+      margin-top: 37px;
     }
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     .ilustration {
-      width: 585px;
-      height: 595px;
-      @media (min-width: 1280px) and (max-width: 1439px) {
-        width: 435px;
+      width: 40.625%;
+      height: 31%;
+      @media all and (max-width: 1280px) {
+        width: 34%;
         height: 445px;
         img {
           width: 100%;
           height: 100%;
         }
       }
-      @media (min-width: 390px) and (max-width: 428px) {
+      @media all and (max-width: 390px) {
         opacity: 0.3;
         filter: blur(4px);
         position: absolute;
-        width: 411px;
+        width: 105.38%;
         height: 394px;
         left: 104px;
         top: 157px;
@@ -60,38 +58,39 @@
     }
     .textBlock {
       height: 554px;
-      @media only screen and (min-width: 1640px) {
-        width: 525px;
+      width: 27.34%;
+      @media all and (max-width: 1440px) {
+        width: 39%;
       }
-      @media only screen and (min-width: 1440px) and (max-width: 1639px) {
-        width: 431px;
-      }
-      @media only screen and (min-width: 1280px) and (max-width: 1439px) {
-        width: 431px;
+      @media all and (max-width: 1280px) {
+        width: 33.67%;
         height: 450px;
         display: flex;
         flex-direction: column;
       }
-      @media (min-width: 390px) and (max-width: 428px) {
-        width: 330px;
+      @media all and (max-width: 390px) {
+        width: 84.61%;
         height: 572px;
       }
       .topic {
         @include main-topic-text(20px);
-        @media only screen and (min-width: 1280px) and (max-width: 1439px) {
+        @media all and (max-width: 1280px) {
           @include main-topic-text(15px);
         }
-        @media (min-width: 390px) and (max-width: 428px) {
+        @media all and (max-width: 390px) {
           text-align: center;
           @include main-topic-text(20px);
         }
       }
       .title {
         @include main-title-text(68px);
-        @media only screen and (min-width: 1280px) and (max-width: 1439px) {
-          @include main-title-text(58px);
+        @media all and (max-width: 1440px) {
+          @include main-title-text(62px);
         }
-        @media (min-width: 390px) and (max-width: 428px) {
+        @media all and (max-width: 1280px) {
+          @include main-title-text(54px);
+        }
+        @media all and (max-width: 390px) {
           @include main-title-text(48px);
           text-align: center;
         }
@@ -100,14 +99,16 @@
       .description {
         margin-top: 25px;
         @include main-description-text(16px);
-        @media only screen and (min-width: 1280px) and (max-width: 1439px) {
+        @media all and (max-width: 1280px) {
           @include main-description-text(12px);
         }
-        @media (min-width: 390px) and (max-width: 428px) {
+        @media all and (max-width: 390px) {
           text-align: center;
         }
       }
       .button {
+        display: inline-block;
+        position: relative;
         width: 200px;
         height: 83px;
         background: none;
@@ -115,34 +116,34 @@
         background-image: url(./../images/ilustrations/button.svg);
         background-repeat: no-repeat;
         cursor: pointer;
-        @media (min-width: 1640px) {
-          margin-top: 93px;
+        margin-top: 93px;
+        @media all and (max-width: 1440px) {
+          margin-top: 37px;
         }
-        @media (min-width: 1440px) and (max-width: 1639px) {
-          margin-top: 77px;
-        }
-        @media (min-width: 1280px) and (max-width: 1439px) {
+        @media all and (max-width: 1280px) {
           @include main-button-text(12px);
+          // width: 13.28%;
           width: 170px;
           height: 63px;
           background-size: contain;
           margin-top: 30px;
           align-self: flex-end;
         }
-        @media (min-width: 390px) and (max-width: 428px) {
+        @media all and (max-width: 390px) {
           justify-self: center;
           align-self: center;
-          width: 190px;
-          margin: 37px 70px 0 70px;
+          width: 48.7%;
+          margin: 9.58% 17.94% 0 17.94%;
         }
         @include main-button-text(16px);
 
         p {
+          position: absolute;
           margin-right: 12px;
           margin-bottom: 7px;
           top: 27px;
           left: 44px;
-          @media only screen and (min-width: 1280px) and (max-width: 1439px) {
+          @media all and (max-width: 1280px) {
             margin-right: 26px;
             margin-bottom: 3px;
             top: 27px;
@@ -159,9 +160,12 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    width: 74px;
+    width: 5.14%;
     height: auto;
     padding-bottom: 10px;
+    @media all and (max-width: 390px) {
+      padding-bottom: 70px;
+    }
     transition: all 0.6s 0s ease;
     opacity: 1;
     .arrow {
@@ -187,7 +191,7 @@
       }
     }
     .scrollText {
-      width: 74px;
+      width: 100%;
       height: 32px;
       @include main-scroll-text(13px);
     }
@@ -199,7 +203,7 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    width: 74px;
+    width: 5.14%;
     height: auto;
     padding-bottom: 10px;
     visibility: hidden;
@@ -208,7 +212,7 @@
     .arrow {
       width: 100%;
       height: 34px;
-      @media only screen and (min-width: 1280px) and (max-width: 1439px) {
+      @media all and (max-width: 1280px) {
         width: 100%;
         height: 34px;
       }
@@ -220,12 +224,12 @@
       }
     }
     .scrollText {
-      width: 74px;
+      width: 100%;
       height: 32px;
       text-align: center;
       @include main-scroll-text(13px);
-      @media only screen and (min-width: 1280px) and (max-width: 1439px) {
-        width: 50px;
+      @media all and (max-width: 1280px) {
+        width: 100%;
         height: 32px;
         @include main-scroll-text(10px);
         margin-left: 22.5px;

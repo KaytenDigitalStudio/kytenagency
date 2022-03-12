@@ -87,6 +87,38 @@
   text-transform: uppercase;
   color: colors.$white;
 }
+@mixin workflow-number($font-size) {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $font-size;
+  line-height: 180%;
+  /* or 135px */
+  text-align: center;
+  color: colors.$white;
+}
+@mixin portolio-title($fontSize) {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: $fontSize;
+  line-height: 180%;
+  /* or 29px */
+  text-transform: capitalize;
+  color: colors.$white;
+}
+@mixin portfolio-companyLink($fontSize) {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: $fontSize;
+  line-height: 30px;
+  /* identical to box height */
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: colors.$white;
+}
 
 @mixin footer-allRights-text($fontSize) {
   font-family: Poppins;
@@ -121,10 +153,6 @@
   font-size: $fontSize;
   line-height: 180%;
   /* or 74px */
-  display: flex;
-  align-items: center;
-  text-align: center;
-  text-transform: uppercase;
   color: colors.$white;
   opacity: 0.9;
 }

@@ -1,8 +1,10 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import classes from '../../styles/About.module.scss';
 import about from '../../images/ilustrations/about.png';
 
 function AboutUs() {
+  const { t } = useTranslation();
   return (
     <div className={classes.about} id='about'>
       <div className={classes.body}>
@@ -10,16 +12,9 @@ function AboutUs() {
           <img src={about} alt='' draggable='false' />
         </div>
         <div className={classes.textBlock}>
-          <p className={classes.topic}>About</p>
-          <p className={classes.title}>
-            WE DEVELOP WEBSITES OF ANY COMPLEXITY FOR ANY BUSINESS
-          </p>
-          <p className={classes.description}>
-            Our professional team is ready to fulfill your every request to
-            solve your problem. Using only advanced, modern technologies
-            available on the market we will implement your wishes in the best
-            way. Your wishes are our concern.
-          </p>
+          <p className={classes.topic}>{t('about.topic')}</p>
+          <p className={classes.title}>{t('about.title')}</p>
+          <p className={classes.description}>{t('about.desc')}</p>
         </div>
       </div>
     </div>

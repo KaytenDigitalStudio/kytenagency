@@ -9,7 +9,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  @media (min-width: 390px) and (max-width: 428px) {
+  @media all and (max-width: 390px) {
     margin-top: 0;
   }
   .body {
@@ -25,7 +25,7 @@
       img {
         width: 538.85px;
         height: 538.85px;
-        @media (min-width: 390px) and (max-width: 428px) {
+        @media all and (max-width: 390px) {
           opacity: 0.5;
         }
       }
@@ -35,7 +35,7 @@
       -moz-user-select: none;
       -ms-user-select: none;
       user-select: none;
-      @media (min-width: 390px) and (max-width: 428px) {
+      @media all and (max-width: 390px) {
         position: absolute;
         width: 538.85px;
         height: 538.85px;
@@ -44,20 +44,20 @@
       }
     }
     .textBlock {
-      @media only screen and (min-width: 1640px) {
+      @media all and (min-width: 1640px) {
         width: 626px;
       }
-      @media only screen and (min-width: 1440px) and (max-width: 1639px) {
+      @media all and (max-width: 1440px) {
         width: 431px;
       }
-      @media (min-width: 390px) and (max-width: 428px) {
+      @media all and (max-width: 390px) {
         width: 330px;
         height: 564px;
       }
       height: 568px;
       .topic {
         @include main-topic-text(20px);
-        @media (min-width: 390px) and (max-width: 428px) {
+        @media all and (max-width: 390px) {
           text-align: center;
         }
       }
@@ -65,7 +65,7 @@
         @include main-title-text(68px);
         margin-top: 15px;
         width: 602px;
-        @media (min-width: 390px) and (max-width: 428px) {
+        @media all and (min-width: 390px) and (max-width: 428px) {
           @include main-title-text(48px);
           text-align: center;
           width: 330px;
@@ -74,7 +74,7 @@
       .description {
         margin-top: 25px;
         @include main-description-text(16px);
-        @media (min-width: 390px) and (max-width: 428px) {
+        @media all and (min-width: 390px) and (max-width: 428px) {
           text-align: center;
         }
       }
